@@ -18,6 +18,12 @@ static const char PLANFOOTSTEPS[] = "humanoid_nav_msgs/PlanFootsteps";
       geometry_msgs::Pose2D start;
       geometry_msgs::Pose2D goal;
 
+    PlanFootstepsRequest():
+      start(),
+      goal()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -50,6 +56,16 @@ static const char PLANFOOTSTEPS[] = "humanoid_nav_msgs/PlanFootsteps";
       float final_eps;
       float planning_time;
       int64_t expanded_states;
+
+    PlanFootstepsResponse():
+      result(0),
+      footsteps_length(0), footsteps(NULL),
+      costs(0),
+      final_eps(0),
+      planning_time(0),
+      expanded_states(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

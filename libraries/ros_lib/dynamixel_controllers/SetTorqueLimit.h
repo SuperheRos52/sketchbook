@@ -15,6 +15,11 @@ static const char SETTORQUELIMIT[] = "dynamixel_controllers/SetTorqueLimit";
     public:
       float torque_limit;
 
+    SetTorqueLimitRequest():
+      torque_limit(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -37,6 +42,10 @@ static const char SETTORQUELIMIT[] = "dynamixel_controllers/SetTorqueLimit";
   class SetTorqueLimitResponse : public ros::Msg
   {
     public:
+
+    SetTorqueLimitResponse()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

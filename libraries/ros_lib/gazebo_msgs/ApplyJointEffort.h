@@ -20,6 +20,14 @@ static const char APPLYJOINTEFFORT[] = "gazebo_msgs/ApplyJointEffort";
       ros::Time start_time;
       ros::Duration duration;
 
+    ApplyJointEffortRequest():
+      joint_name(""),
+      effort(0),
+      start_time(),
+      duration()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -98,6 +106,12 @@ static const char APPLYJOINTEFFORT[] = "gazebo_msgs/ApplyJointEffort";
     public:
       bool success;
       const char* status_message;
+
+    ApplyJointEffortResponse():
+      success(0),
+      status_message("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

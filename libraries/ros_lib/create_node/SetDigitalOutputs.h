@@ -17,6 +17,13 @@ static const char SETDIGITALOUTPUTS[] = "create_node/SetDigitalOutputs";
       uint8_t digital_out_1;
       uint8_t digital_out_2;
 
+    SetDigitalOutputsRequest():
+      digital_out_0(0),
+      digital_out_1(0),
+      digital_out_2(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -50,6 +57,11 @@ static const char SETDIGITALOUTPUTS[] = "create_node/SetDigitalOutputs";
   {
     public:
       bool done;
+
+    SetDigitalOutputsResponse():
+      done(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

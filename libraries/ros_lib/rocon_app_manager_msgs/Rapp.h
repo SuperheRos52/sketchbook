@@ -31,6 +31,20 @@ namespace rocon_app_manager_msgs
       rocon_std_msgs::KeyValue st_public_parameters;
       rocon_std_msgs::KeyValue * public_parameters;
 
+    Rapp():
+      name(""),
+      display_name(""),
+      description(""),
+      compatibility(""),
+      status(""),
+      implementations_length(0), implementations(NULL),
+      preferred(""),
+      icon(),
+      public_interface_length(0), public_interface(NULL),
+      public_parameters_length(0), public_parameters(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

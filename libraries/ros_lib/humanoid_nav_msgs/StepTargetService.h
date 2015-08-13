@@ -16,6 +16,11 @@ static const char STEPTARGETSERVICE[] = "humanoid_nav_msgs/StepTargetService";
     public:
       humanoid_nav_msgs::StepTarget step;
 
+    StepTargetServiceRequest():
+      step()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -38,6 +43,10 @@ static const char STEPTARGETSERVICE[] = "humanoid_nav_msgs/StepTargetService";
   class StepTargetServiceResponse : public ros::Msg
   {
     public:
+
+    StepTargetServiceResponse()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

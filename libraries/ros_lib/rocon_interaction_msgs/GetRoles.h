@@ -15,6 +15,11 @@ static const char GETROLES[] = "rocon_interaction_msgs/GetRoles";
     public:
       const char* uri;
 
+    GetRolesRequest():
+      uri("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -52,6 +57,11 @@ static const char GETROLES[] = "rocon_interaction_msgs/GetRoles";
       uint8_t roles_length;
       char* st_roles;
       char* * roles;
+
+    GetRolesResponse():
+      roles_length(0), roles(NULL)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

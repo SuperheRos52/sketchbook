@@ -47,6 +47,23 @@ namespace gateway_msgs
       gateway_msgs::RemoteRule st_pulled_connections;
       gateway_msgs::RemoteRule * pulled_connections;
 
+    GatewayInfo():
+      name(""),
+      connected(0),
+      ip(""),
+      hub_names_length(0), hub_names(NULL),
+      hub_uris_length(0), hub_uris(NULL),
+      firewall(0),
+      public_watchlist_length(0), public_watchlist(NULL),
+      public_interface_length(0), public_interface(NULL),
+      flipped_connections_length(0), flipped_connections(NULL),
+      flip_watchlist_length(0), flip_watchlist(NULL),
+      flipped_in_connections_length(0), flipped_in_connections(NULL),
+      pull_watchlist_length(0), pull_watchlist(NULL),
+      pulled_connections_length(0), pulled_connections(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

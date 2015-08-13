@@ -17,6 +17,13 @@ static const char USECAPABILITY[] = "capabilities/UseCapability";
       const char* preferred_provider;
       const char* bond_id;
 
+    UseCapabilityRequest():
+      capability(""),
+      preferred_provider(""),
+      bond_id("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -79,6 +86,10 @@ static const char USECAPABILITY[] = "capabilities/UseCapability";
   class UseCapabilityResponse : public ros::Msg
   {
     public:
+
+    UseCapabilityResponse()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

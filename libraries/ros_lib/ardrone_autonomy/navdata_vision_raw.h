@@ -21,6 +21,17 @@ namespace ardrone_autonomy
       float vision_ty_raw;
       float vision_tz_raw;
 
+    navdata_vision_raw():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      vision_tx_raw(0),
+      vision_ty_raw(0),
+      vision_tz_raw(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

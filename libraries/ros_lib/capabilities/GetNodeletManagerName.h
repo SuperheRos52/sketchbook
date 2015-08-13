@@ -14,6 +14,10 @@ static const char GETNODELETMANAGERNAME[] = "capabilities/GetNodeletManagerName"
   {
     public:
 
+    GetNodeletManagerNameRequest()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -35,6 +39,11 @@ static const char GETNODELETMANAGERNAME[] = "capabilities/GetNodeletManagerName"
   {
     public:
       const char* nodelet_manager_name;
+
+    GetNodeletManagerNameResponse():
+      nodelet_manager_name("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

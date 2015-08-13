@@ -24,6 +24,16 @@ static const char APPLYBODYWRENCH[] = "gazebo_msgs/ApplyBodyWrench";
       ros::Time start_time;
       ros::Duration duration;
 
+    ApplyBodyWrenchRequest():
+      body_name(""),
+      reference_frame(""),
+      reference_point(),
+      wrench(),
+      start_time(),
+      duration()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -118,6 +128,12 @@ static const char APPLYBODYWRENCH[] = "gazebo_msgs/ApplyBodyWrench";
     public:
       bool success;
       const char* status_message;
+
+    ApplyBodyWrenchResponse():
+      success(0),
+      status_message("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

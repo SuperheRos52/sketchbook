@@ -15,6 +15,11 @@ static const char GETMODELPROPERTIES[] = "gazebo_msgs/GetModelProperties";
     public:
       const char* model_name;
 
+    GetModelPropertiesRequest():
+      model_name("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -66,6 +71,19 @@ static const char GETMODELPROPERTIES[] = "gazebo_msgs/GetModelProperties";
       bool is_static;
       bool success;
       const char* status_message;
+
+    GetModelPropertiesResponse():
+      parent_model_name(""),
+      canonical_body_name(""),
+      body_names_length(0), body_names(NULL),
+      geom_names_length(0), geom_names(NULL),
+      joint_names_length(0), joint_names(NULL),
+      child_model_names_length(0), child_model_names(NULL),
+      is_static(0),
+      success(0),
+      status_message("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

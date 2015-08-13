@@ -20,6 +20,14 @@ namespace rocon_interaction_msgs
       int32_t * running_interactions;
       const char* version;
 
+    RemoconStatus():
+      platform_info(),
+      uuid(""),
+      running_interactions_length(0), running_interactions(NULL),
+      version("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

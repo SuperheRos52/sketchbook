@@ -15,6 +15,11 @@ static const char LOADCONTROLLER[] = "controller_manager_msgs/LoadController";
     public:
       const char* name;
 
+    LoadControllerRequest():
+      name("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -50,6 +55,11 @@ static const char LOADCONTROLLER[] = "controller_manager_msgs/LoadController";
   {
     public:
       bool ok;
+
+    LoadControllerResponse():
+      ok(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

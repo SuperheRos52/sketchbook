@@ -15,6 +15,11 @@ static const char DELETEMODEL[] = "gazebo_msgs/DeleteModel";
     public:
       const char* model_name;
 
+    DeleteModelRequest():
+      model_name("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -51,6 +56,12 @@ static const char DELETEMODEL[] = "gazebo_msgs/DeleteModel";
     public:
       bool success;
       const char* status_message;
+
+    DeleteModelResponse():
+      success(0),
+      status_message("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

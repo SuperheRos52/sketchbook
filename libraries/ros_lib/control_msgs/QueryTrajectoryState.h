@@ -16,6 +16,11 @@ static const char QUERYTRAJECTORYSTATE[] = "control_msgs/QueryTrajectoryState";
     public:
       ros::Time time;
 
+    QueryTrajectoryStateRequest():
+      time()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -68,6 +73,14 @@ static const char QUERYTRAJECTORYSTATE[] = "control_msgs/QueryTrajectoryState";
       uint8_t acceleration_length;
       float st_acceleration;
       float * acceleration;
+
+    QueryTrajectoryStateResponse():
+      name_length(0), name(NULL),
+      position_length(0), position(NULL),
+      velocity_length(0), velocity(NULL),
+      acceleration_length(0), acceleration(NULL)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

@@ -15,6 +15,11 @@ static const char TORQUEENABLE[] = "dynamixel_controllers/TorqueEnable";
     public:
       bool torque_enable;
 
+    TorqueEnableRequest():
+      torque_enable(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -50,6 +55,10 @@ static const char TORQUEENABLE[] = "dynamixel_controllers/TorqueEnable";
   class TorqueEnableResponse : public ros::Msg
   {
     public:
+
+    TorqueEnableResponse()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

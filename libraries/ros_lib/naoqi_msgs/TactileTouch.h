@@ -20,6 +20,12 @@ namespace naoqi_msgs
       enum { stateReleased = 0 };
       enum { statePressed = 1 };
 
+    TactileTouch():
+      button(0),
+      state(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

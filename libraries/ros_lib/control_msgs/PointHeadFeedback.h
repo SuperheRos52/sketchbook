@@ -14,6 +14,11 @@ namespace control_msgs
     public:
       float pointing_angle_error;
 
+    PointHeadFeedback():
+      pointing_angle_error(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

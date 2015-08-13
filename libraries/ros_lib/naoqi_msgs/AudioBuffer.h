@@ -32,6 +32,14 @@ namespace naoqi_msgs
       enum { CHANNEL_SUBWOOFER = 8 };
       enum { CHANNEL_LFE = 9 };
 
+    AudioBuffer():
+      header(),
+      frequency(0),
+      channelMap_length(0), channelMap(NULL),
+      data_length(0), data(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

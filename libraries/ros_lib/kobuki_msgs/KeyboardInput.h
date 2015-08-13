@@ -21,6 +21,11 @@ namespace kobuki_msgs
       enum { KeyCode_Enable =  101     };
       enum { KeyCode_Disable =  100     };
 
+    KeyboardInput():
+      pressedKey(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

@@ -22,6 +22,16 @@ namespace ardrone_autonomy
       uint8_t st_data_frame;
       uint8_t * data_frame;
 
+    navdata_adc_data_frame():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      version(0),
+      data_frame_length(0), data_frame(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

@@ -19,6 +19,12 @@ namespace ar_track_alvar_msgs
       ar_track_alvar_msgs::AlvarMarker st_markers;
       ar_track_alvar_msgs::AlvarMarker * markers;
 
+    AlvarMarkers():
+      header(),
+      markers_length(0), markers(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

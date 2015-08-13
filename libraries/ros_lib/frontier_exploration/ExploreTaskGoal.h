@@ -17,6 +17,12 @@ namespace frontier_exploration
       geometry_msgs::PolygonStamped explore_boundary;
       geometry_msgs::PointStamped explore_center;
 
+    ExploreTaskGoal():
+      explore_boundary(),
+      explore_center()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

@@ -19,6 +19,15 @@ namespace frontier_exploration
       geometry_msgs::Point centroid;
       geometry_msgs::Point middle;
 
+    Frontier():
+      size(0),
+      min_distance(0),
+      initial(),
+      centroid(),
+      middle()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

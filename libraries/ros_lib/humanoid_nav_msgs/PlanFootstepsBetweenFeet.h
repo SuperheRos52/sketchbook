@@ -19,6 +19,14 @@ static const char PLANFOOTSTEPSBETWEENFEET[] = "humanoid_nav_msgs/PlanFootstepsB
       humanoid_nav_msgs::StepTarget goal_left;
       humanoid_nav_msgs::StepTarget goal_right;
 
+    PlanFootstepsBetweenFeetRequest():
+      start_left(),
+      start_right(),
+      goal_left(),
+      goal_right()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -55,6 +63,16 @@ static const char PLANFOOTSTEPSBETWEENFEET[] = "humanoid_nav_msgs/PlanFootstepsB
       float final_eps;
       float planning_time;
       int64_t expanded_states;
+
+    PlanFootstepsBetweenFeetResponse():
+      result(0),
+      footsteps_length(0), footsteps(NULL),
+      costs(0),
+      final_eps(0),
+      planning_time(0),
+      expanded_states(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

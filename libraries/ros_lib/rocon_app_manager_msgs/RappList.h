@@ -20,6 +20,12 @@ namespace rocon_app_manager_msgs
       rocon_app_manager_msgs::Rapp st_running_rapps;
       rocon_app_manager_msgs::Rapp * running_rapps;
 
+    RappList():
+      available_rapps_length(0), available_rapps(NULL),
+      running_rapps_length(0), running_rapps(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

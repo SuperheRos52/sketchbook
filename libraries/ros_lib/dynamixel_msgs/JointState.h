@@ -28,6 +28,20 @@ namespace dynamixel_msgs
       float load;
       bool is_moving;
 
+    JointState():
+      header(),
+      name(""),
+      motor_ids_length(0), motor_ids(NULL),
+      motor_temps_length(0), motor_temps(NULL),
+      goal_pos(0),
+      current_pos(0),
+      error(0),
+      velocity(0),
+      load(0),
+      is_moving(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

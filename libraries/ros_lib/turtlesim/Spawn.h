@@ -18,6 +18,14 @@ static const char SPAWN[] = "turtlesim/Spawn";
       float theta;
       const char* name;
 
+    SpawnRequest():
+      x(0),
+      y(0),
+      theta(0),
+      name("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -116,6 +124,11 @@ static const char SPAWN[] = "turtlesim/Spawn";
   {
     public:
       const char* name;
+
+    SpawnResponse():
+      name("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

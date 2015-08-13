@@ -16,6 +16,12 @@ namespace gateway_msgs
       const char* gateway;
       gateway_msgs::Rule rule;
 
+    RemoteRule():
+      gateway(""),
+      rule()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

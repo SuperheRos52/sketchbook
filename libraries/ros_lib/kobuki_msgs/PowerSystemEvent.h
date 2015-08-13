@@ -20,6 +20,11 @@ namespace kobuki_msgs
       enum { BATTERY_LOW =  4 };
       enum { BATTERY_CRITICAL =  5 };
 
+    PowerSystemEvent():
+      event(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

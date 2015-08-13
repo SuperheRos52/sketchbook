@@ -15,6 +15,11 @@ namespace naoqi_msgs
     public:
       std_msgs::ColorRGBA last_color;
 
+    BlinkFeedback():
+      last_color()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

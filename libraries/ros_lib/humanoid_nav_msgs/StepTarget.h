@@ -18,6 +18,12 @@ namespace humanoid_nav_msgs
       enum { right = 0                };
       enum { left = 1                 };
 
+    StepTarget():
+      pose(),
+      leg(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

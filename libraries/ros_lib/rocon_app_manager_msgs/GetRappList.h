@@ -15,6 +15,10 @@ static const char GETRAPPLIST[] = "rocon_app_manager_msgs/GetRappList";
   {
     public:
 
+    GetRappListRequest()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -41,6 +45,12 @@ static const char GETRAPPLIST[] = "rocon_app_manager_msgs/GetRappList";
       uint8_t running_rapps_length;
       rocon_app_manager_msgs::Rapp st_running_rapps;
       rocon_app_manager_msgs::Rapp * running_rapps;
+
+    GetRappListResponse():
+      available_rapps_length(0), available_rapps(NULL),
+      running_rapps_length(0), running_rapps(NULL)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

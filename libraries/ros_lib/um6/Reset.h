@@ -18,6 +18,14 @@ static const char RESET[] = "um6/Reset";
       bool set_mag_ref;
       bool set_accel_ref;
 
+    ResetRequest():
+      zero_gyros(0),
+      reset_ekf(0),
+      set_mag_ref(0),
+      set_accel_ref(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -98,6 +106,10 @@ static const char RESET[] = "um6/Reset";
   class ResetResponse : public ros::Msg
   {
     public:
+
+    ResetResponse()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

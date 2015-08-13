@@ -18,6 +18,14 @@ namespace control_msgs
       float velocity;
       float error;
 
+    SingleJointPositionFeedback():
+      header(),
+      position(0),
+      velocity(0),
+      error(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

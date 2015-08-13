@@ -20,6 +20,13 @@ static const char REMOTEALL[] = "gateway_msgs/RemoteAll";
       gateway_msgs::Rule * blacklist;
       bool cancel;
 
+    RemoteAllRequest():
+      gateway(""),
+      blacklist_length(0), blacklist(NULL),
+      cancel(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -87,6 +94,12 @@ static const char REMOTEALL[] = "gateway_msgs/RemoteAll";
     public:
       int8_t result;
       const char* error_message;
+
+    RemoteAllResponse():
+      result(0),
+      error_message("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

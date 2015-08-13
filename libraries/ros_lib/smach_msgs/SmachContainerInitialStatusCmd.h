@@ -18,6 +18,13 @@ namespace smach_msgs
       char* * initial_states;
       const char* local_data;
 
+    SmachContainerInitialStatusCmd():
+      path(""),
+      initial_states_length(0), initial_states(NULL),
+      local_data("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

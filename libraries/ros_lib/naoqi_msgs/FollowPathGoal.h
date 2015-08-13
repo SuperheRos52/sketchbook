@@ -15,6 +15,11 @@ namespace naoqi_msgs
     public:
       nav_msgs::Path path;
 
+    FollowPathGoal():
+      path()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

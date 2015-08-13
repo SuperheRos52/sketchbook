@@ -14,6 +14,11 @@ namespace naoqi_msgs
     public:
       const char* say;
 
+    SpeechWithFeedbackGoal():
+      say("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

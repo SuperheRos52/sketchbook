@@ -23,6 +23,13 @@ static const char SWITCHCONTROLLER[] = "controller_manager_msgs/SwitchController
       enum { BEST_EFFORT = 1 };
       enum { STRICT = 2 };
 
+    SwitchControllerRequest():
+      start_controllers_length(0), start_controllers(NULL),
+      stop_controllers_length(0), stop_controllers(NULL),
+      strictness(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -121,6 +128,11 @@ static const char SWITCHCONTROLLER[] = "controller_manager_msgs/SwitchController
   {
     public:
       bool ok;
+
+    SwitchControllerResponse():
+      ok(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

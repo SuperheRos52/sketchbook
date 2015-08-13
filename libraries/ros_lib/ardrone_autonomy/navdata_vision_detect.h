@@ -51,6 +51,25 @@ namespace ardrone_autonomy
       uint32_t st_camera_source;
       uint32_t * camera_source;
 
+    navdata_vision_detect():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      nb_detected(0),
+      type_length(0), type(NULL),
+      xc_length(0), xc(NULL),
+      yc_length(0), yc(NULL),
+      width_length(0), width(NULL),
+      height_length(0), height(NULL),
+      dist_length(0), dist(NULL),
+      orientation_angle_length(0), orientation_angle(NULL),
+      rotation_length(0), rotation(NULL),
+      translation_length(0), translation(NULL),
+      camera_source_length(0), camera_source(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

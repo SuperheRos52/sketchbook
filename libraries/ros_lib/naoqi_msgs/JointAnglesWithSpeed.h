@@ -23,6 +23,15 @@ namespace naoqi_msgs
       float speed;
       uint8_t relative;
 
+    JointAnglesWithSpeed():
+      header(),
+      joint_names_length(0), joint_names(NULL),
+      joint_angles_length(0), joint_angles(NULL),
+      speed(0),
+      relative(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

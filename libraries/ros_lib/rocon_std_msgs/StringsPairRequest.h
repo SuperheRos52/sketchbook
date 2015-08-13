@@ -17,6 +17,12 @@ namespace rocon_std_msgs
       uuid_msgs::UniqueID id;
       rocon_std_msgs::StringsRequest request;
 
+    StringsPairRequest():
+      id(),
+      request()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

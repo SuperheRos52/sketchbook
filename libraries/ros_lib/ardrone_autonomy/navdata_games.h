@@ -20,6 +20,16 @@ namespace ardrone_autonomy
       uint32_t double_tap_counter;
       uint32_t finish_line_counter;
 
+    navdata_games():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      double_tap_counter(0),
+      finish_line_counter(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

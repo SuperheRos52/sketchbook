@@ -17,6 +17,14 @@ namespace capabilities
       const char* content;
       const char* default_provider;
 
+    CapabilitySpec():
+      package(""),
+      type(""),
+      content(""),
+      default_provider("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

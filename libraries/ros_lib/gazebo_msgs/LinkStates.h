@@ -24,6 +24,13 @@ namespace gazebo_msgs
       geometry_msgs::Twist st_twist;
       geometry_msgs::Twist * twist;
 
+    LinkStates():
+      name_length(0), name(NULL),
+      pose_length(0), pose(NULL),
+      twist_length(0), twist(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

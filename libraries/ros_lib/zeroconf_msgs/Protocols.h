@@ -16,6 +16,10 @@ namespace zeroconf_msgs
       enum { IPV4 =  1 };
       enum { IPV6 =  2 };
 
+    Protocols()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

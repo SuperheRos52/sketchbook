@@ -16,6 +16,11 @@ static const char SETBIAS[] = "hector_gazebo_plugins/SetBias";
     public:
       geometry_msgs::Vector3 bias;
 
+    SetBiasRequest():
+      bias()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -38,6 +43,10 @@ static const char SETBIAS[] = "hector_gazebo_plugins/SetBias";
   class SetBiasResponse : public ros::Msg
   {
     public:
+
+    SetBiasResponse()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

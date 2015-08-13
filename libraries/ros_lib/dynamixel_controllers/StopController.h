@@ -15,6 +15,11 @@ static const char STOPCONTROLLER[] = "dynamixel_controllers/StopController";
     public:
       const char* controller_name;
 
+    StopControllerRequest():
+      controller_name("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -51,6 +56,12 @@ static const char STOPCONTROLLER[] = "dynamixel_controllers/StopController";
     public:
       bool success;
       const char* reason;
+
+    StopControllerResponse():
+      success(0),
+      reason("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

@@ -16,6 +16,11 @@ static const char UPDATEBOUNDARYPOLYGON[] = "frontier_exploration/UpdateBoundary
     public:
       geometry_msgs::PolygonStamped explore_boundary;
 
+    UpdateBoundaryPolygonRequest():
+      explore_boundary()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -38,6 +43,10 @@ static const char UPDATEBOUNDARYPOLYGON[] = "frontier_exploration/UpdateBoundary
   class UpdateBoundaryPolygonResponse : public ros::Msg
   {
     public:
+
+    UpdateBoundaryPolygonResponse()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

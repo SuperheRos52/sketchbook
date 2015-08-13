@@ -16,6 +16,12 @@ static const char REQUESTINTERACTION[] = "rocon_interaction_msgs/RequestInteract
       const char* remocon;
       int32_t hash;
 
+    RequestInteractionRequest():
+      remocon(""),
+      hash(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -74,6 +80,13 @@ static const char REQUESTINTERACTION[] = "rocon_interaction_msgs/RequestInteract
       bool result;
       int8_t error_code;
       const char* message;
+
+    RequestInteractionResponse():
+      result(0),
+      error_code(0),
+      message("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

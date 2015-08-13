@@ -21,6 +21,15 @@ namespace control_msgs
       ros::Duration min_duration;
       float max_velocity;
 
+    PointHeadGoal():
+      target(),
+      pointing_axis(),
+      pointing_frame(""),
+      min_duration(),
+      max_velocity(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

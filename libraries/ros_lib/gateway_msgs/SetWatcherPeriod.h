@@ -15,6 +15,11 @@ static const char SETWATCHERPERIOD[] = "gateway_msgs/SetWatcherPeriod";
     public:
       float period;
 
+    SetWatcherPeriodRequest():
+      period(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -57,6 +62,11 @@ static const char SETWATCHERPERIOD[] = "gateway_msgs/SetWatcherPeriod";
   {
     public:
       float last_period;
+
+    SetWatcherPeriodResponse():
+      last_period(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

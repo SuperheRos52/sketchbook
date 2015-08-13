@@ -16,6 +16,12 @@ static const char GETPROVIDERS[] = "capabilities/GetProviders";
       const char* interface;
       bool include_semantic;
 
+    GetProvidersRequest():
+      interface(""),
+      include_semantic(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -69,6 +75,12 @@ static const char GETPROVIDERS[] = "capabilities/GetProviders";
       char* st_providers;
       char* * providers;
       const char* default_provider;
+
+    GetProvidersResponse():
+      providers_length(0), providers(NULL),
+      default_provider("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

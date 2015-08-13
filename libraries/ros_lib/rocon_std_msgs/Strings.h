@@ -58,6 +58,10 @@ namespace rocon_std_msgs
       enum { TAG_GAZEBO_ROBOT_TYPE = concert_gazebo };
       enum { TAG_SOFTWARE = software_farm };
 
+    Strings()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

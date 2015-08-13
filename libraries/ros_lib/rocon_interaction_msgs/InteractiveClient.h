@@ -21,6 +21,14 @@ namespace rocon_interaction_msgs
       char* st_running_interactions;
       char* * running_interactions;
 
+    InteractiveClient():
+      name(""),
+      id(),
+      platform_info(),
+      running_interactions_length(0), running_interactions(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

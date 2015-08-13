@@ -25,6 +25,20 @@ static const char SETLINKPROPERTIES[] = "gazebo_msgs/SetLinkProperties";
       float iyz;
       float izz;
 
+    SetLinkPropertiesRequest():
+      link_name(""),
+      com(),
+      gravity_mode(0),
+      mass(0),
+      ixx(0),
+      ixy(0),
+      ixz(0),
+      iyy(0),
+      iyz(0),
+      izz(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -92,6 +106,12 @@ static const char SETLINKPROPERTIES[] = "gazebo_msgs/SetLinkProperties";
     public:
       bool success;
       const char* status_message;
+
+    SetLinkPropertiesResponse():
+      success(0),
+      status_message("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

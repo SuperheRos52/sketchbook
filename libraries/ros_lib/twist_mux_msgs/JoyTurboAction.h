@@ -19,6 +19,13 @@ namespace twist_mux_msgs
       twist_mux_msgs::JoyTurboActionResult action_result;
       twist_mux_msgs::JoyTurboActionFeedback action_feedback;
 
+    JoyTurboAction():
+      action_goal(),
+      action_result(),
+      action_feedback()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

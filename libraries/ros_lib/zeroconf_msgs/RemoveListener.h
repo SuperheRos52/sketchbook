@@ -15,6 +15,11 @@ static const char REMOVELISTENER[] = "zeroconf_msgs/RemoveListener";
     public:
       const char* service_type;
 
+    RemoveListenerRequest():
+      service_type("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -50,6 +55,11 @@ static const char REMOVELISTENER[] = "zeroconf_msgs/RemoveListener";
   {
     public:
       bool result;
+
+    RemoveListenerResponse():
+      result(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

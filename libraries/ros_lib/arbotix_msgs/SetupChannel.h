@@ -18,6 +18,14 @@ static const char SETUPCHANNEL[] = "arbotix_msgs/SetupChannel";
       uint8_t value;
       uint8_t rate;
 
+    SetupChannelRequest():
+      topic_name(""),
+      pin(0),
+      value(0),
+      rate(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -64,6 +72,10 @@ static const char SETUPCHANNEL[] = "arbotix_msgs/SetupChannel";
   class SetupChannelResponse : public ros::Msg
   {
     public:
+
+    SetupChannelResponse()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

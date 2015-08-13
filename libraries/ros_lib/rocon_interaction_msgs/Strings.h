@@ -14,6 +14,10 @@ namespace rocon_interaction_msgs
     public:
       enum { REMOCONS_NAMESPACE =  /remocons };
 
+    Strings()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

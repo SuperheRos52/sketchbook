@@ -16,6 +16,11 @@ static const char LISTPUBLISHEDSERVICES[] = "zeroconf_msgs/ListPublishedServices
     public:
       const char* service_type;
 
+    ListPublishedServicesRequest():
+      service_type("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -53,6 +58,11 @@ static const char LISTPUBLISHEDSERVICES[] = "zeroconf_msgs/ListPublishedServices
       uint8_t services_length;
       zeroconf_msgs::PublishedService st_services;
       zeroconf_msgs::PublishedService * services;
+
+    ListPublishedServicesResponse():
+      services_length(0), services(NULL)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

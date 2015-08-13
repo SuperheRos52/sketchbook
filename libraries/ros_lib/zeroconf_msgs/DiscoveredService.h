@@ -31,6 +31,24 @@ namespace zeroconf_msgs
       bool multicast;
       bool cached;
 
+    DiscoveredService():
+      name(""),
+      type(""),
+      domain(""),
+      description(""),
+      hostname(""),
+      ipv4_addresses_length(0), ipv4_addresses(NULL),
+      ipv6_addresses_length(0), ipv6_addresses(NULL),
+      port(0),
+      cookie(0),
+      is_local(0),
+      our_own(0),
+      wide_area(0),
+      multicast(0),
+      cached(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

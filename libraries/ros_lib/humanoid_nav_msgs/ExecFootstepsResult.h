@@ -17,6 +17,11 @@ namespace humanoid_nav_msgs
       humanoid_nav_msgs::StepTarget st_executed_footsteps;
       humanoid_nav_msgs::StepTarget * executed_footsteps;
 
+    ExecFootstepsResult():
+      executed_footsteps_length(0), executed_footsteps(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

@@ -25,6 +25,10 @@ namespace rocon_app_manager_msgs
       enum { INVITING_CONTROLLER_BLACKLISTED =  35 };
       enum { CLIENT_CONNECTION_DISRUPTED =  36 };
 
+    ErrorCodes()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

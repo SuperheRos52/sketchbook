@@ -17,6 +17,13 @@ static const char INVITE[] = "rocon_app_manager_msgs/Invite";
       const char* application_namespace;
       bool cancel;
 
+    InviteRequest():
+      remote_target_name(""),
+      application_namespace(""),
+      cancel(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -83,6 +90,13 @@ static const char INVITE[] = "rocon_app_manager_msgs/Invite";
       bool result;
       int32_t error_code;
       const char* message;
+
+    InviteResponse():
+      result(0),
+      error_code(0),
+      message("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

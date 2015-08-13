@@ -43,6 +43,20 @@ namespace gazebo_msgs
       float st_vel;
       float * vel;
 
+    ODEJointProperties():
+      damping_length(0), damping(NULL),
+      hiStop_length(0), hiStop(NULL),
+      loStop_length(0), loStop(NULL),
+      erp_length(0), erp(NULL),
+      cfm_length(0), cfm(NULL),
+      stop_erp_length(0), stop_erp(NULL),
+      stop_cfm_length(0), stop_cfm(NULL),
+      fudge_factor_length(0), fudge_factor(NULL),
+      fmax_length(0), fmax(NULL),
+      vel_length(0), vel(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

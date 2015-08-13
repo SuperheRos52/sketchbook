@@ -18,6 +18,13 @@ namespace rocon_std_msgs
       uint8_t st_data;
       uint8_t * data;
 
+    Icon():
+      resource_name(""),
+      format(""),
+      data_length(0), data(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

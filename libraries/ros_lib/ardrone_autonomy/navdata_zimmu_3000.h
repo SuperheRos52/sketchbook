@@ -20,6 +20,16 @@ namespace ardrone_autonomy
       int32_t vzimmuLSB;
       float vzfind;
 
+    navdata_zimmu_3000():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      vzimmuLSB(0),
+      vzfind(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

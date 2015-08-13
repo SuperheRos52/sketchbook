@@ -22,6 +22,15 @@ namespace control_msgs
       trajectory_msgs::JointTrajectoryPoint actual;
       trajectory_msgs::JointTrajectoryPoint error;
 
+    JointTrajectoryControllerState():
+      header(),
+      joint_names_length(0), joint_names(NULL),
+      desired(),
+      actual(),
+      error()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

@@ -19,6 +19,13 @@ namespace kobuki_msgs
       kobuki_msgs::AutoDockingActionResult action_result;
       kobuki_msgs::AutoDockingActionFeedback action_feedback;
 
+    AutoDockingAction():
+      action_goal(),
+      action_result(),
+      action_feedback()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

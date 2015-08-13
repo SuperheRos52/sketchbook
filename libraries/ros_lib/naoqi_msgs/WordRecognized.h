@@ -19,6 +19,12 @@ namespace naoqi_msgs
       float st_confidence_values;
       float * confidence_values;
 
+    WordRecognized():
+      words_length(0), words(NULL),
+      confidence_values_length(0), confidence_values(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

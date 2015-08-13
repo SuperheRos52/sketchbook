@@ -21,6 +21,12 @@ namespace gateway_msgs
       enum { BLOCKED = blocked };
       enum { RESEND = resend };
 
+    RemoteRuleWithStatus():
+      remote_rule(),
+      status("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

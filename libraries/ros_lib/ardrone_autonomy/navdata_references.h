@@ -39,6 +39,35 @@ namespace ardrone_autonomy
       float ui_psi_accuracy;
       int32_t ui_seq;
 
+    navdata_references():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      ref_theta(0),
+      ref_phi(0),
+      ref_theta_I(0),
+      ref_phi_I(0),
+      ref_pitch(0),
+      ref_roll(0),
+      ref_yaw(0),
+      ref_psi(0),
+      vx_ref(0),
+      vy_ref(0),
+      theta_mod(0),
+      phi_mod(0),
+      k_v_x(0),
+      k_v_y(0),
+      k_mode(0),
+      ui_time(0),
+      ui_theta(0),
+      ui_phi(0),
+      ui_psi(0),
+      ui_psi_accuracy(0),
+      ui_seq(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

@@ -17,6 +17,12 @@ static const char GETLINKSTATE[] = "gazebo_msgs/GetLinkState";
       const char* link_name;
       const char* reference_frame;
 
+    GetLinkStateRequest():
+      link_name(""),
+      reference_frame("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -68,6 +74,13 @@ static const char GETLINKSTATE[] = "gazebo_msgs/GetLinkState";
       gazebo_msgs::LinkState link_state;
       bool success;
       const char* status_message;
+
+    GetLinkStateResponse():
+      link_state(),
+      success(0),
+      status_message("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

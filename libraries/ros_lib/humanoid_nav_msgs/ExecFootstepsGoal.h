@@ -18,6 +18,12 @@ namespace humanoid_nav_msgs
       humanoid_nav_msgs::StepTarget * footsteps;
       float feedback_frequency;
 
+    ExecFootstepsGoal():
+      footsteps_length(0), footsteps(NULL),
+      feedback_frequency(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

@@ -18,6 +18,14 @@ namespace create_node
       uint16_t charge;
       uint16_t capacity;
 
+    BatteryState():
+      header(),
+      temperature(0),
+      charge(0),
+      capacity(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

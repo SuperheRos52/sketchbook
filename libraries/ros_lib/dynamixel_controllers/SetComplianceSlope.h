@@ -15,6 +15,11 @@ static const char SETCOMPLIANCESLOPE[] = "dynamixel_controllers/SetComplianceSlo
     public:
       uint8_t slope;
 
+    SetComplianceSlopeRequest():
+      slope(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -39,6 +44,10 @@ static const char SETCOMPLIANCESLOPE[] = "dynamixel_controllers/SetComplianceSlo
   class SetComplianceSlopeResponse : public ros::Msg
   {
     public:
+
+    SetComplianceSlopeResponse()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

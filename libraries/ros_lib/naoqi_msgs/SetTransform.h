@@ -16,6 +16,11 @@ static const char SETTRANSFORM[] = "naoqi_msgs/SetTransform";
     public:
       geometry_msgs::Transform offset;
 
+    SetTransformRequest():
+      offset()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -38,6 +43,10 @@ static const char SETTRANSFORM[] = "naoqi_msgs/SetTransform";
   class SetTransformResponse : public ros::Msg
   {
     public:
+
+    SetTransformResponse()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

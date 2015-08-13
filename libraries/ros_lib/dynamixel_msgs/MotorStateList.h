@@ -17,6 +17,11 @@ namespace dynamixel_msgs
       dynamixel_msgs::MotorState st_motor_states;
       dynamixel_msgs::MotorState * motor_states;
 
+    MotorStateList():
+      motor_states_length(0), motor_states(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

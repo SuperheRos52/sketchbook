@@ -18,6 +18,14 @@ static const char SETPIDGAINS[] = "control_toolbox/SetPidGains";
       float d;
       float i_clamp;
 
+    SetPidGainsRequest():
+      p(0),
+      i(0),
+      d(0),
+      i_clamp(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -46,6 +54,10 @@ static const char SETPIDGAINS[] = "control_toolbox/SetPidGains";
   class SetPidGainsResponse : public ros::Msg
   {
     public:
+
+    SetPidGainsResponse()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

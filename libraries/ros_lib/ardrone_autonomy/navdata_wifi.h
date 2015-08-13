@@ -19,6 +19,15 @@ namespace ardrone_autonomy
       uint16_t size;
       uint32_t link_quality;
 
+    navdata_wifi():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      link_quality(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

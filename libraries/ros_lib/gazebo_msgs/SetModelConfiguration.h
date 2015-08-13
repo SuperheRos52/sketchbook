@@ -22,6 +22,14 @@ static const char SETMODELCONFIGURATION[] = "gazebo_msgs/SetModelConfiguration";
       float st_joint_positions;
       float * joint_positions;
 
+    SetModelConfigurationRequest():
+      model_name(""),
+      urdf_param_name(""),
+      joint_names_length(0), joint_names(NULL),
+      joint_positions_length(0), joint_positions(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -116,6 +124,12 @@ static const char SETMODELCONFIGURATION[] = "gazebo_msgs/SetModelConfiguration";
     public:
       bool success;
       const char* status_message;
+
+    SetModelConfigurationResponse():
+      success(0),
+      status_message("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

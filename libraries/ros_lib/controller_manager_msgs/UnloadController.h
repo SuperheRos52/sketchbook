@@ -15,6 +15,11 @@ static const char UNLOADCONTROLLER[] = "controller_manager_msgs/UnloadController
     public:
       const char* name;
 
+    UnloadControllerRequest():
+      name("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -50,6 +55,11 @@ static const char UNLOADCONTROLLER[] = "controller_manager_msgs/UnloadController
   {
     public:
       bool ok;
+
+    UnloadControllerResponse():
+      ok(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

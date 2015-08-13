@@ -19,6 +19,13 @@ namespace naoqi_msgs
       naoqi_msgs::SpeechWithFeedbackActionResult action_result;
       naoqi_msgs::SpeechWithFeedbackActionFeedback action_feedback;
 
+    SpeechWithFeedbackAction():
+      action_goal(),
+      action_result(),
+      action_feedback()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

@@ -16,6 +16,11 @@ static const char SETLINKSTATE[] = "gazebo_msgs/SetLinkState";
     public:
       gazebo_msgs::LinkState link_state;
 
+    SetLinkStateRequest():
+      link_state()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -40,6 +45,12 @@ static const char SETLINKSTATE[] = "gazebo_msgs/SetLinkState";
     public:
       bool success;
       const char* status_message;
+
+    SetLinkStateResponse():
+      success(0),
+      status_message("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

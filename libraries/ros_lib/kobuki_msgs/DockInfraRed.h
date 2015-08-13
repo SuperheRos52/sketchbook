@@ -24,6 +24,12 @@ namespace kobuki_msgs
       enum { FAR_CENTER =   8 };
       enum { FAR_RIGHT =  32 };
 
+    DockInfraRed():
+      header(),
+      data_length(0), data(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

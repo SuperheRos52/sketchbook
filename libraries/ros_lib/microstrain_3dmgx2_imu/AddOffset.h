@@ -15,6 +15,11 @@ static const char ADDOFFSET[] = "microstrain_3dmgx2_imu/AddOffset";
     public:
       float add_offset;
 
+    AddOffsetRequest():
+      add_offset(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -38,6 +43,11 @@ static const char ADDOFFSET[] = "microstrain_3dmgx2_imu/AddOffset";
   {
     public:
       float total_offset;
+
+    AddOffsetResponse():
+      total_offset(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

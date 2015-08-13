@@ -25,6 +25,14 @@ namespace rocon_app_manager_msgs
       char* st_capabilities_incompatible_rapps;
       char* * capabilities_incompatible_rapps;
 
+    IncompatibleRappList():
+      blacklisted_rapps_length(0), blacklisted_rapps(NULL),
+      non_whitelisted_rapps_length(0), non_whitelisted_rapps(NULL),
+      platform_incompatible_rapps_length(0), platform_incompatible_rapps(NULL),
+      capabilities_incompatible_rapps_length(0), capabilities_incompatible_rapps(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

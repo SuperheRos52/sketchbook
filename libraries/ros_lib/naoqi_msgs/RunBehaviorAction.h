@@ -19,6 +19,13 @@ namespace naoqi_msgs
       naoqi_msgs::RunBehaviorActionResult action_result;
       naoqi_msgs::RunBehaviorActionFeedback action_feedback;
 
+    RunBehaviorAction():
+      action_goal(),
+      action_result(),
+      action_feedback()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

@@ -16,6 +16,11 @@ static const char ADDSERVICE[] = "zeroconf_msgs/AddService";
     public:
       zeroconf_msgs::PublishedService service;
 
+    AddServiceRequest():
+      service()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -39,6 +44,11 @@ static const char ADDSERVICE[] = "zeroconf_msgs/AddService";
   {
     public:
       bool result;
+
+    AddServiceResponse():
+      result(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

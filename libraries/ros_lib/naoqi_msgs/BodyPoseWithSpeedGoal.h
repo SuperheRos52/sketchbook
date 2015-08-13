@@ -15,6 +15,12 @@ namespace naoqi_msgs
       const char* posture_name;
       float speed;
 
+    BodyPoseWithSpeedGoal():
+      posture_name(""),
+      speed(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

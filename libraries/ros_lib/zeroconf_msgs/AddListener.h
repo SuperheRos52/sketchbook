@@ -15,6 +15,11 @@ static const char ADDLISTENER[] = "zeroconf_msgs/AddListener";
     public:
       const char* service_type;
 
+    AddListenerRequest():
+      service_type("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -50,6 +55,11 @@ static const char ADDLISTENER[] = "zeroconf_msgs/AddListener";
   {
     public:
       bool result;
+
+    AddListenerResponse():
+      result(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

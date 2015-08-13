@@ -13,6 +13,10 @@ namespace twist_mux_msgs
   {
     public:
 
+    JoyPriorityFeedback()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

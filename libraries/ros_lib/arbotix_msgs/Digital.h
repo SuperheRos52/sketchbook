@@ -21,6 +21,13 @@ namespace arbotix_msgs
       enum { INPUT = 0 };
       enum { OUTPUT = 255 };
 
+    Digital():
+      header(),
+      value(0),
+      direction(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

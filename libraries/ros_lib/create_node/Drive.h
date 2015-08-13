@@ -15,6 +15,12 @@ namespace create_node
       float velocity;
       float radius;
 
+    Drive():
+      velocity(0),
+      radius(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

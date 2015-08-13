@@ -31,6 +31,27 @@ namespace ardrone_autonomy
       int32_t data5;
       uint32_t fifo_queue_level;
 
+    navdata_video_stream():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      quant(0),
+      frame_size(0),
+      frame_number(0),
+      atcmd_ref_seq(0),
+      atcmd_mean_ref_gap(0),
+      atcmd_var_ref_gap(0),
+      atcmd_ref_quality(0),
+      desired_bitrate(0),
+      data2(0),
+      data3(0),
+      data4(0),
+      data5(0),
+      fifo_queue_level(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

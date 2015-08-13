@@ -15,6 +15,11 @@ namespace naoqi_msgs
     public:
       naoqi_msgs::JointAnglesWithSpeed joint_angles;
 
+    JointAnglesWithSpeedGoal():
+      joint_angles()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

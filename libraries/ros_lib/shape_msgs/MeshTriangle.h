@@ -14,6 +14,11 @@ namespace shape_msgs
     public:
       uint32_t vertex_indices[3];
 
+    MeshTriangle():
+      vertex_indices()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

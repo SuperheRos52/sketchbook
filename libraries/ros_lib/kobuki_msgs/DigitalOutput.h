@@ -15,6 +15,12 @@ namespace kobuki_msgs
       bool values[4];
       bool mask[4];
 
+    DigitalOutput():
+      values(),
+      mask()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

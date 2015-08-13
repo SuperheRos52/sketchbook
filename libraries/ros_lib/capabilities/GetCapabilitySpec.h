@@ -16,6 +16,11 @@ static const char GETCAPABILITYSPEC[] = "capabilities/GetCapabilitySpec";
     public:
       const char* capability_spec;
 
+    GetCapabilitySpecRequest():
+      capability_spec("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -51,6 +56,11 @@ static const char GETCAPABILITYSPEC[] = "capabilities/GetCapabilitySpec";
   {
     public:
       capabilities::CapabilitySpec capability_spec;
+
+    GetCapabilitySpecResponse():
+      capability_spec()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

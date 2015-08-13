@@ -15,6 +15,12 @@ namespace control_msgs
       float position;
       float max_effort;
 
+    GripperCommand():
+      position(0),
+      max_effort(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

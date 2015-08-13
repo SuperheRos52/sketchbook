@@ -22,6 +22,15 @@ namespace naoqi_msgs
       float blink_rate_mean;
       float blink_rate_sd;
 
+    BlinkGoal():
+      colors_length(0), colors(NULL),
+      bg_color(),
+      blink_duration(),
+      blink_rate_mean(0),
+      blink_rate_sd(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

@@ -21,6 +21,13 @@ namespace kobuki_msgs
       enum { FLOOR =  0 };
       enum { CLIFF =  1 };
 
+    CliffEvent():
+      sensor(0),
+      state(0),
+      bottom(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

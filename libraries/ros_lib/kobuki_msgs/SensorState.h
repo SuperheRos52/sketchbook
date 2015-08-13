@@ -61,6 +61,27 @@ namespace kobuki_msgs
       enum { DIGITAL_INPUT3 =  8 };
       enum { DB25_TEST_BOARD_CONNECTED =  64 };
 
+    SensorState():
+      header(),
+      time_stamp(0),
+      bumper(0),
+      wheel_drop(0),
+      cliff(0),
+      left_encoder(0),
+      right_encoder(0),
+      left_pwm(0),
+      right_pwm(0),
+      buttons(0),
+      charger(0),
+      battery(0),
+      bottom_length(0), bottom(NULL),
+      current_length(0), current(NULL),
+      over_current(0),
+      digital_input(0),
+      analog_input_length(0), analog_input(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

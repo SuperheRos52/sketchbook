@@ -19,6 +19,13 @@ namespace naoqi_msgs
       actionlib_msgs::GoalStatus status;
       naoqi_msgs::JointTrajectoryResult result;
 
+    JointTrajectoryActionResult():
+      header(),
+      status(),
+      result()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

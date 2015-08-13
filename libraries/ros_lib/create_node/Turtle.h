@@ -15,6 +15,12 @@ namespace create_node
       float linear;
       float angular;
 
+    Turtle():
+      linear(0),
+      angular(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

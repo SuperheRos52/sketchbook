@@ -16,6 +16,12 @@ namespace frontier_exploration
       geometry_msgs::PoseStamped next_frontier;
       geometry_msgs::PoseStamped base_position;
 
+    ExploreTaskFeedback():
+      next_frontier(),
+      base_position()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

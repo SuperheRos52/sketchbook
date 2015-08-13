@@ -16,6 +16,11 @@ static const char SETMODELSTATE[] = "gazebo_msgs/SetModelState";
     public:
       gazebo_msgs::ModelState model_state;
 
+    SetModelStateRequest():
+      model_state()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -40,6 +45,12 @@ static const char SETMODELSTATE[] = "gazebo_msgs/SetModelState";
     public:
       bool success;
       const char* status_message;
+
+    SetModelStateResponse():
+      success(0),
+      status_message("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

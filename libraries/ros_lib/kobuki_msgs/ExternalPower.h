@@ -21,6 +21,12 @@ namespace kobuki_msgs
       enum { OFF =  0 };
       enum { ON =  1 };
 
+    ExternalPower():
+      source(0),
+      state(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

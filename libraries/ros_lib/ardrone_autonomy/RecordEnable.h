@@ -15,6 +15,11 @@ static const char RECORDENABLE[] = "ardrone_autonomy/RecordEnable";
     public:
       bool enable;
 
+    RecordEnableRequest():
+      enable(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -51,6 +56,11 @@ static const char RECORDENABLE[] = "ardrone_autonomy/RecordEnable";
   {
     public:
       bool result;
+
+    RecordEnableResponse():
+      result(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

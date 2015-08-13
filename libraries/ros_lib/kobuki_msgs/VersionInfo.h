@@ -22,6 +22,15 @@ namespace kobuki_msgs
       enum { SMOOTH_MOVE_START =  0000000000000001 };
       enum { GYROSCOPE_3D_DATA =  0000000000000002 };
 
+    VersionInfo():
+      hardware(""),
+      firmware(""),
+      software(""),
+      udid_length(0), udid(NULL),
+      features(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

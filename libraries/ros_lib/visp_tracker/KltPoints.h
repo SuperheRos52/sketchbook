@@ -19,6 +19,12 @@ namespace visp_tracker
       visp_tracker::KltPoint st_klt_points_positions;
       visp_tracker::KltPoint * klt_points_positions;
 
+    KltPoints():
+      header(),
+      klt_points_positions_length(0), klt_points_positions(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

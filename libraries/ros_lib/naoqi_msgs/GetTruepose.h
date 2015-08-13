@@ -15,6 +15,10 @@ static const char GETTRUEPOSE[] = "naoqi_msgs/GetTruepose";
   {
     public:
 
+    GetTrueposeRequest()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -36,6 +40,11 @@ static const char GETTRUEPOSE[] = "naoqi_msgs/GetTruepose";
   {
     public:
       geometry_msgs::PoseWithCovarianceStamped pose;
+
+    GetTrueposeResponse():
+      pose()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

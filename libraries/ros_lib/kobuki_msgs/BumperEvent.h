@@ -20,6 +20,12 @@ namespace kobuki_msgs
       enum { RELEASED =  0 };
       enum { PRESSED =  1 };
 
+    BumperEvent():
+      bumper(0),
+      state(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

@@ -19,6 +19,13 @@ namespace naoqi_msgs
       naoqi_msgs::BodyPoseActionResult action_result;
       naoqi_msgs::BodyPoseActionFeedback action_feedback;
 
+    BodyPoseAction():
+      action_goal(),
+      action_result(),
+      action_feedback()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

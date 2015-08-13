@@ -16,6 +16,12 @@ namespace arbotix_msgs
       std_msgs::Header header;
       uint8_t value;
 
+    Analog():
+      header(),
+      value(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

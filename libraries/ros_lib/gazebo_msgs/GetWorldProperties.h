@@ -14,6 +14,10 @@ static const char GETWORLDPROPERTIES[] = "gazebo_msgs/GetWorldProperties";
   {
     public:
 
+    GetWorldPropertiesRequest()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -41,6 +45,15 @@ static const char GETWORLDPROPERTIES[] = "gazebo_msgs/GetWorldProperties";
       bool rendering_enabled;
       bool success;
       const char* status_message;
+
+    GetWorldPropertiesResponse():
+      sim_time(0),
+      model_names_length(0), model_names(NULL),
+      rendering_enabled(0),
+      success(0),
+      status_message("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

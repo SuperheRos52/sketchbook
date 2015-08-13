@@ -23,6 +23,20 @@ namespace dynamixel_msgs
       int32_t temperature;
       bool moving;
 
+    MotorState():
+      timestamp(0),
+      id(0),
+      goal(0),
+      position(0),
+      error(0),
+      speed(0),
+      load(0),
+      voltage(0),
+      temperature(0),
+      moving(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

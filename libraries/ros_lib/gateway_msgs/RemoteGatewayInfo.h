@@ -18,6 +18,11 @@ static const char REMOTEGATEWAYINFO[] = "gateway_msgs/RemoteGatewayInfo";
       char* st_gateways;
       char* * gateways;
 
+    RemoteGatewayInfoRequest():
+      gateways_length(0), gateways(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -69,6 +74,11 @@ static const char REMOTEGATEWAYINFO[] = "gateway_msgs/RemoteGatewayInfo";
       uint8_t gateways_length;
       gateway_msgs::RemoteGateway st_gateways;
       gateway_msgs::RemoteGateway * gateways;
+
+    RemoteGatewayInfoResponse():
+      gateways_length(0), gateways(NULL)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

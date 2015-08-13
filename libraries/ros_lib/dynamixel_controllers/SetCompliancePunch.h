@@ -15,6 +15,11 @@ static const char SETCOMPLIANCEPUNCH[] = "dynamixel_controllers/SetCompliancePun
     public:
       uint8_t punch;
 
+    SetCompliancePunchRequest():
+      punch(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -39,6 +44,10 @@ static const char SETCOMPLIANCEPUNCH[] = "dynamixel_controllers/SetCompliancePun
   class SetCompliancePunchResponse : public ros::Msg
   {
     public:
+
+    SetCompliancePunchResponse()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

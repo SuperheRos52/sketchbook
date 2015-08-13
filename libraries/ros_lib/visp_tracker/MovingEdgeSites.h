@@ -19,6 +19,12 @@ namespace visp_tracker
       visp_tracker::MovingEdgeSite st_moving_edge_sites;
       visp_tracker::MovingEdgeSite * moving_edge_sites;
 
+    MovingEdgeSites():
+      header(),
+      moving_edge_sites_length(0), moving_edge_sites(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

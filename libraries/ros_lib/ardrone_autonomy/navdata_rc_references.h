@@ -23,6 +23,19 @@ namespace ardrone_autonomy
       int32_t rc_ref_gaz;
       int32_t rc_ref_ag;
 
+    navdata_rc_references():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      rc_ref_pitch(0),
+      rc_ref_roll(0),
+      rc_ref_yaw(0),
+      rc_ref_gaz(0),
+      rc_ref_ag(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

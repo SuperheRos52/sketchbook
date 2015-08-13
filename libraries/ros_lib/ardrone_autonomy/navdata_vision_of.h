@@ -24,6 +24,16 @@ namespace ardrone_autonomy
       float st_of_dy;
       float * of_dy;
 
+    navdata_vision_of():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      of_dx_length(0), of_dx(NULL),
+      of_dy_length(0), of_dy(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

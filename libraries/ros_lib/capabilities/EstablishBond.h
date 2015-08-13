@@ -14,6 +14,10 @@ static const char ESTABLISHBOND[] = "capabilities/EstablishBond";
   {
     public:
 
+    EstablishBondRequest()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -35,6 +39,11 @@ static const char ESTABLISHBOND[] = "capabilities/EstablishBond";
   {
     public:
       const char* bond_id;
+
+    EstablishBondResponse():
+      bond_id("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

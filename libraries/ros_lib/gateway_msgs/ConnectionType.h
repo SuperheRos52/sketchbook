@@ -19,6 +19,10 @@ namespace gateway_msgs
       enum { ACTION_SERVER =  action_server };
       enum { INVALID =  invalid };
 
+    ConnectionType()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

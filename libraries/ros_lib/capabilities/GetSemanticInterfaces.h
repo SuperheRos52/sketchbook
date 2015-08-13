@@ -15,6 +15,11 @@ static const char GETSEMANTICINTERFACES[] = "capabilities/GetSemanticInterfaces"
     public:
       const char* interface;
 
+    GetSemanticInterfacesRequest():
+      interface("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -52,6 +57,11 @@ static const char GETSEMANTICINTERFACES[] = "capabilities/GetSemanticInterfaces"
       uint8_t semantic_interfaces_length;
       char* st_semantic_interfaces;
       char* * semantic_interfaces;
+
+    GetSemanticInterfacesResponse():
+      semantic_interfaces_length(0), semantic_interfaces(NULL)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

@@ -19,6 +19,13 @@ namespace frontier_exploration
       frontier_exploration::ExploreTaskActionResult action_result;
       frontier_exploration::ExploreTaskActionFeedback action_feedback;
 
+    ExploreTaskAction():
+      action_goal(),
+      action_result(),
+      action_feedback()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

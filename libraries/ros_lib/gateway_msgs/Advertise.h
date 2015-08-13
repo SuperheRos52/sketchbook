@@ -19,6 +19,12 @@ static const char ADVERTISE[] = "gateway_msgs/Advertise";
       gateway_msgs::Rule st_rules;
       gateway_msgs::Rule * rules;
 
+    AdvertiseRequest():
+      cancel(0),
+      rules_length(0), rules(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -75,6 +81,13 @@ static const char ADVERTISE[] = "gateway_msgs/Advertise";
       uint8_t watchlist_length;
       gateway_msgs::Rule st_watchlist;
       gateway_msgs::Rule * watchlist;
+
+    AdvertiseResponse():
+      result(0),
+      error_message(""),
+      watchlist_length(0), watchlist(NULL)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

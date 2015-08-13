@@ -23,6 +23,20 @@ namespace gazebo_msgs
       float erp;
       uint32_t max_contacts;
 
+    ODEPhysics():
+      auto_disable_bodies(0),
+      sor_pgs_precon_iters(0),
+      sor_pgs_iters(0),
+      sor_pgs_w(0),
+      sor_pgs_rms_error_tol(0),
+      contact_surface_layer(0),
+      contact_max_correcting_vel(0),
+      cfm(0),
+      erp(0),
+      max_contacts(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

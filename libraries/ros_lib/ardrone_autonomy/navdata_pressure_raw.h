@@ -22,6 +22,18 @@ namespace ardrone_autonomy
       int32_t Temperature_meas;
       int32_t Pression_meas;
 
+    navdata_pressure_raw():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      up(0),
+      ut(0),
+      Temperature_meas(0),
+      Pression_meas(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

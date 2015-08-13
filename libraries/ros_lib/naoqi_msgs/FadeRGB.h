@@ -18,6 +18,13 @@ namespace naoqi_msgs
       std_msgs::ColorRGBA color;
       ros::Duration fade_duration;
 
+    FadeRGB():
+      led_name(""),
+      color(),
+      fade_duration()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

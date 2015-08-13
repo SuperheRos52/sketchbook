@@ -18,6 +18,15 @@ namespace zeroconf_msgs
       int32_t port;
       const char* description;
 
+    PublishedService():
+      name(""),
+      type(""),
+      domain(""),
+      port(0),
+      description("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

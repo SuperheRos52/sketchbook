@@ -43,6 +43,39 @@ namespace ardrone_autonomy
       uint16_t current_motor4;
       float altitude_der;
 
+    navdata_pwm():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      motor1(0),
+      motor2(0),
+      motor3(0),
+      motor4(0),
+      sat_motor1(0),
+      sat_motor2(0),
+      sat_motor3(0),
+      sat_motor4(0),
+      gaz_feed_forward(0),
+      gaz_altitude(0),
+      altitude_integral(0),
+      vz_ref(0),
+      u_pitch(0),
+      u_roll(0),
+      u_yaw(0),
+      yaw_u_I(0),
+      u_pitch_planif(0),
+      u_roll_planif(0),
+      u_yaw_planif(0),
+      u_gaz_planif(0),
+      current_motor1(0),
+      current_motor2(0),
+      current_motor3(0),
+      current_motor4(0),
+      altitude_der(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

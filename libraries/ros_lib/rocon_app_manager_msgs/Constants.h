@@ -15,6 +15,10 @@ namespace rocon_app_manager_msgs
       enum { NO_REMOTE_CONNECTION = none };
       enum { NO_REMOTE_CONTROLLER = none };
 
+    Constants()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

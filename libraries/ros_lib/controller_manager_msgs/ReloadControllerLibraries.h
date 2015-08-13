@@ -15,6 +15,11 @@ static const char RELOADCONTROLLERLIBRARIES[] = "controller_manager_msgs/ReloadC
     public:
       bool force_kill;
 
+    ReloadControllerLibrariesRequest():
+      force_kill(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -51,6 +56,11 @@ static const char RELOADCONTROLLERLIBRARIES[] = "controller_manager_msgs/ReloadC
   {
     public:
       bool ok;
+
+    ReloadControllerLibrariesResponse():
+      ok(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

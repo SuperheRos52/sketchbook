@@ -16,6 +16,12 @@ static const char FREECAPABILITY[] = "capabilities/FreeCapability";
       const char* capability;
       const char* bond_id;
 
+    FreeCapabilityRequest():
+      capability(""),
+      bond_id("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -64,6 +70,10 @@ static const char FREECAPABILITY[] = "capabilities/FreeCapability";
   class FreeCapabilityResponse : public ros::Msg
   {
     public:
+
+    FreeCapabilityResponse()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

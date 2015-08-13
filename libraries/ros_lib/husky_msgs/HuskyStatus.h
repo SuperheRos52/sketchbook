@@ -35,6 +35,31 @@ namespace husky_msgs
       bool no_battery;
       bool current_limit;
 
+    HuskyStatus():
+      header(),
+      uptime(0),
+      ros_control_loop_freq(0),
+      mcu_and_user_port_current(0),
+      left_driver_current(0),
+      right_driver_current(0),
+      battery_voltage(0),
+      left_driver_voltage(0),
+      right_driver_voltage(0),
+      left_driver_temp(0),
+      right_driver_temp(0),
+      left_motor_temp(0),
+      right_motor_temp(0),
+      capacity_estimate(0),
+      charge_estimate(0),
+      timeout(0),
+      lockout(0),
+      e_stop(0),
+      ros_pause(0),
+      no_battery(0),
+      current_limit(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

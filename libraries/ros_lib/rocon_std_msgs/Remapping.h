@@ -15,6 +15,12 @@ namespace rocon_std_msgs
       const char* remap_from;
       const char* remap_to;
 
+    Remapping():
+      remap_from(""),
+      remap_to("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

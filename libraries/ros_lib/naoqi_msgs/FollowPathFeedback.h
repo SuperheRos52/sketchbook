@@ -14,6 +14,11 @@ namespace naoqi_msgs
     public:
       uint32_t index;
 
+    FollowPathFeedback():
+      index(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

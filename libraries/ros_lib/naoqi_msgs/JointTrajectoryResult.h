@@ -15,6 +15,11 @@ namespace naoqi_msgs
     public:
       sensor_msgs::JointState goal_position;
 
+    JointTrajectoryResult():
+      goal_position()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

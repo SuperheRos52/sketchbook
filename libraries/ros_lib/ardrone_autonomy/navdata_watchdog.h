@@ -18,6 +18,14 @@ namespace ardrone_autonomy
       uint16_t tag;
       uint16_t size;
 
+    navdata_watchdog():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

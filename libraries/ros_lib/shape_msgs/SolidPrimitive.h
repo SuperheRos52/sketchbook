@@ -29,6 +29,12 @@ namespace shape_msgs
       enum { CONE_HEIGHT = 0 };
       enum { CONE_RADIUS = 1 };
 
+    SolidPrimitive():
+      type(0),
+      dimensions_length(0), dimensions(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

@@ -19,6 +19,13 @@ namespace naoqi_msgs
       naoqi_msgs::BlinkActionResult action_result;
       naoqi_msgs::BlinkActionFeedback action_feedback;
 
+    BlinkAction():
+      action_goal(),
+      action_result(),
+      action_feedback()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

@@ -24,6 +24,19 @@ namespace controller_manager_msgs
       int32_t num_control_loop_overruns;
       ros::Time time_last_control_loop_overrun;
 
+    ControllerStatistics():
+      name(""),
+      type(""),
+      timestamp(),
+      running(0),
+      max_time(),
+      mean_time(),
+      variance_time(),
+      num_control_loop_overruns(0),
+      time_last_control_loop_overrun()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

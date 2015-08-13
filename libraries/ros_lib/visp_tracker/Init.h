@@ -4,6 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "ros/msg.h"
+#include "visp_tracker/TrackerSettings.h"
 #include "visp_tracker/KltSettings.h"
 #include "visp_tracker/MovingEdgeSettings.h"
 #include "geometry_msgs/Transform.h"
@@ -17,13 +18,23 @@ static const char INIT[] = "visp_tracker/Init";
   {
     public:
       geometry_msgs::Transform initial_cMo;
+      visp_tracker::TrackerSettings tracker_param;
       visp_tracker::MovingEdgeSettings moving_edge;
       visp_tracker::KltSettings klt_param;
+
+    InitRequest():
+      initial_cMo(),
+      tracker_param(),
+      moving_edge(),
+      klt_param()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
       offset += this->initial_cMo.serialize(outbuffer + offset);
+      offset += this->tracker_param.serialize(outbuffer + offset);
       offset += this->moving_edge.serialize(outbuffer + offset);
       offset += this->klt_param.serialize(outbuffer + offset);
       return offset;
@@ -33,13 +44,14 @@ static const char INIT[] = "visp_tracker/Init";
     {
       int offset = 0;
       offset += this->initial_cMo.deserialize(inbuffer + offset);
+      offset += this->tracker_param.deserialize(inbuffer + offset);
       offset += this->moving_edge.deserialize(inbuffer + offset);
       offset += this->klt_param.deserialize(inbuffer + offset);
      return offset;
     }
 
     const char * getType(){ return INIT; };
-    const char * getMD5(){ return "6ddad5ffb18cb18d2e35e4638ed71167"; };
+    const char * getMD5(){ return "72f45c4391731722797b61d639ff8889"; };
 
   };
 
@@ -47,6 +59,11 @@ static const char INIT[] = "visp_tracker/Init";
   {
     public:
       bool initialization_succeed;
+
+    InitResponse():
+      initialization_succeed(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

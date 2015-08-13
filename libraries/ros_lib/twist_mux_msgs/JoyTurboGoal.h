@@ -13,6 +13,10 @@ namespace twist_mux_msgs
   {
     public:
 
+    JoyTurboGoal()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

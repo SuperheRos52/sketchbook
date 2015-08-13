@@ -17,6 +17,13 @@ static const char CALIBRATE[] = "visp_camera_calibration/calibrate";
       int32_t sample_width;
       int32_t sample_height;
 
+    calibrateRequest():
+      method(0),
+      sample_width(0),
+      sample_height(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -103,6 +110,11 @@ static const char CALIBRATE[] = "visp_camera_calibration/calibrate";
       uint8_t stdDevErrs_length;
       float st_stdDevErrs;
       float * stdDevErrs;
+
+    calibrateResponse():
+      stdDevErrs_length(0), stdDevErrs(NULL)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

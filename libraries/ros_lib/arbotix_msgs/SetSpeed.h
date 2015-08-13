@@ -15,6 +15,11 @@ static const char SETSPEED[] = "arbotix_msgs/SetSpeed";
     public:
       float speed;
 
+    SetSpeedRequest():
+      speed(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -37,6 +42,10 @@ static const char SETSPEED[] = "arbotix_msgs/SetSpeed";
   class SetSpeedResponse : public ros::Msg
   {
     public:
+
+    SetSpeedResponse()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

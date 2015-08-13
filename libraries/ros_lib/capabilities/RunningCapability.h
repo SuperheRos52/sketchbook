@@ -20,6 +20,14 @@ namespace capabilities
       const char* started_by;
       int32_t pid;
 
+    RunningCapability():
+      capability(),
+      dependent_capabilities_length(0), dependent_capabilities(NULL),
+      started_by(""),
+      pid(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

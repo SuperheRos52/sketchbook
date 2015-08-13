@@ -18,6 +18,14 @@ namespace rocon_std_msgs
       rocon_std_msgs::Icon icon;
       const char* version;
 
+    MasterInfo():
+      name(""),
+      description(""),
+      icon(),
+      version("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

@@ -15,6 +15,10 @@ static const char LISTCONTROLLERS[] = "controller_manager_msgs/ListControllers";
   {
     public:
 
+    ListControllersRequest()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -38,6 +42,11 @@ static const char LISTCONTROLLERS[] = "controller_manager_msgs/ListControllers";
       uint8_t controller_length;
       controller_manager_msgs::ControllerState st_controller;
       controller_manager_msgs::ControllerState * controller;
+
+    ListControllersResponse():
+      controller_length(0), controller(NULL)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

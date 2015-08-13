@@ -16,6 +16,11 @@ static const char CLIPFOOTSTEP[] = "humanoid_nav_msgs/ClipFootstep";
     public:
       humanoid_nav_msgs::StepTarget step;
 
+    ClipFootstepRequest():
+      step()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -39,6 +44,11 @@ static const char CLIPFOOTSTEP[] = "humanoid_nav_msgs/ClipFootstep";
   {
     public:
       humanoid_nav_msgs::StepTarget step;
+
+    ClipFootstepResponse():
+      step()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

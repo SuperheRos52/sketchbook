@@ -20,6 +20,12 @@ namespace rocon_interaction_msgs
       rocon_interaction_msgs::InteractiveClient st_running_clients;
       rocon_interaction_msgs::InteractiveClient * running_clients;
 
+    InteractiveClients():
+      idle_clients_length(0), idle_clients(NULL),
+      running_clients_length(0), running_clients(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

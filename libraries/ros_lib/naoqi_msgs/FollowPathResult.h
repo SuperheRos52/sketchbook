@@ -13,6 +13,10 @@ namespace naoqi_msgs
   {
     public:
 
+    FollowPathResult()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

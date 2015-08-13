@@ -31,6 +31,17 @@ namespace gateway_msgs
       enum { WIRED =  1 };
       enum { WIRELESS =  2 };
 
+    RemoteGateway():
+      name(""),
+      ip(""),
+      firewall(0),
+      conn_stats(),
+      public_interface_length(0), public_interface(NULL),
+      flipped_interface_length(0), flipped_interface(NULL),
+      pulled_interface_length(0), pulled_interface(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

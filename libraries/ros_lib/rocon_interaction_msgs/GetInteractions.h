@@ -19,6 +19,12 @@ static const char GETINTERACTIONS[] = "rocon_interaction_msgs/GetInteractions";
       char* * roles;
       const char* uri;
 
+    GetInteractionsRequest():
+      roles_length(0), roles(NULL),
+      uri("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -84,6 +90,11 @@ static const char GETINTERACTIONS[] = "rocon_interaction_msgs/GetInteractions";
       uint8_t interactions_length;
       rocon_interaction_msgs::Interaction st_interactions;
       rocon_interaction_msgs::Interaction * interactions;
+
+    GetInteractionsResponse():
+      interactions_length(0), interactions(NULL)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

@@ -18,6 +18,11 @@ namespace kobuki_msgs
       enum { ORANGE =  2 };
       enum { RED =  3 };
 
+    Led():
+      value(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

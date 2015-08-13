@@ -26,6 +26,20 @@ namespace ardrone_autonomy
       float st_time_custom;
       float * time_custom;
 
+    navdata_vision_perf():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      time_corners(0),
+      time_compute(0),
+      time_tracking(0),
+      time_trans(0),
+      time_update(0),
+      time_custom_length(0), time_custom(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

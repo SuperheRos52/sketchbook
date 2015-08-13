@@ -31,6 +31,18 @@ namespace gazebo_msgs
       float st_depths;
       float * depths;
 
+    ContactState():
+      info(""),
+      collision1_name(""),
+      collision2_name(""),
+      wrenches_length(0), wrenches(NULL),
+      total_wrench(),
+      contact_positions_length(0), contact_positions(NULL),
+      contact_normals_length(0), contact_normals(NULL),
+      depths_length(0), depths(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

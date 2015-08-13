@@ -15,6 +15,11 @@ static const char CAMSELECT[] = "ardrone_autonomy/CamSelect";
     public:
       uint8_t channel;
 
+    CamSelectRequest():
+      channel(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -40,6 +45,11 @@ static const char CAMSELECT[] = "ardrone_autonomy/CamSelect";
   {
     public:
       bool result;
+
+    CamSelectResponse():
+      result(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

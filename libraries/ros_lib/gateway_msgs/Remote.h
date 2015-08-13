@@ -19,6 +19,12 @@ static const char REMOTE[] = "gateway_msgs/Remote";
       gateway_msgs::RemoteRule * remotes;
       bool cancel;
 
+    RemoteRequest():
+      remotes_length(0), remotes(NULL),
+      cancel(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -72,6 +78,12 @@ static const char REMOTE[] = "gateway_msgs/Remote";
     public:
       int8_t result;
       const char* error_message;
+
+    RemoteResponse():
+      result(0),
+      error_message("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

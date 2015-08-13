@@ -14,6 +14,11 @@ namespace kobuki_msgs
     public:
       const char* text;
 
+    AutoDockingResult():
+      text("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

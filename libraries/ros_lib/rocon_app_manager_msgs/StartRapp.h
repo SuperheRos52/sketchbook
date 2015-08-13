@@ -23,6 +23,13 @@ static const char STARTRAPP[] = "rocon_app_manager_msgs/StartRapp";
       rocon_std_msgs::KeyValue st_parameters;
       rocon_std_msgs::KeyValue * parameters;
 
+    StartRappRequest():
+      name(""),
+      remappings_length(0), remappings(NULL),
+      parameters_length(0), parameters(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -93,6 +100,14 @@ static const char STARTRAPP[] = "rocon_app_manager_msgs/StartRapp";
       int32_t error_code;
       const char* message;
       const char* application_namespace;
+
+    StartRappResponse():
+      started(0),
+      error_code(0),
+      message(""),
+      application_namespace("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

@@ -15,6 +15,12 @@ namespace kobuki_msgs
       const char* state;
       const char* text;
 
+    AutoDockingFeedback():
+      state(""),
+      text("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

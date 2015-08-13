@@ -17,6 +17,11 @@ namespace visp_camera_calibration
       visp_camera_calibration::CalibPoint st_points;
       visp_camera_calibration::CalibPoint * points;
 
+    CalibPointArray():
+      points_length(0), points(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

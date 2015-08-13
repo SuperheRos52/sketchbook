@@ -35,6 +35,31 @@ namespace ardrone_autonomy
       int32_t Flag_multisinus;
       int32_t Flag_multisinus_debut;
 
+    navdata_kalman_pressure():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      offset_pressure(0),
+      est_z(0),
+      est_zdot(0),
+      est_bias_PWM(0),
+      est_biais_pression(0),
+      offset_US(0),
+      prediction_US(0),
+      cov_alt(0),
+      cov_PWM(0),
+      cov_vitesse(0),
+      bool_effet_sol(0),
+      somme_inno(0),
+      flag_rejet_US(0),
+      u_multisinus(0),
+      gaz_altitude(0),
+      Flag_multisinus(0),
+      Flag_multisinus_debut(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

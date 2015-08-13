@@ -16,6 +16,12 @@ namespace kobuki_msgs
       std_msgs::Header header;
       float scan_angle;
 
+    ScanAngle():
+      header(),
+      scan_angle(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

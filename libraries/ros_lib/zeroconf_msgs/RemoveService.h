@@ -16,6 +16,11 @@ static const char REMOVESERVICE[] = "zeroconf_msgs/RemoveService";
     public:
       zeroconf_msgs::PublishedService service;
 
+    RemoveServiceRequest():
+      service()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -39,6 +44,11 @@ static const char REMOVESERVICE[] = "zeroconf_msgs/RemoveService";
   {
     public:
       bool result;
+
+    RemoveServiceResponse():
+      result(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

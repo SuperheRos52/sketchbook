@@ -19,6 +19,13 @@ namespace kobuki_msgs
       actionlib_msgs::GoalStatus status;
       kobuki_msgs::AutoDockingResult result;
 
+    AutoDockingActionResult():
+      header(),
+      status(),
+      result()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

@@ -16,6 +16,11 @@ namespace kobuki_msgs
       enum { ONLINE =  1 };
       enum { OFFLINE =  0 };
 
+    RobotStateEvent():
+      state(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

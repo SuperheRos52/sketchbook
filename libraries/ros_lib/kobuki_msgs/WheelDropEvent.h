@@ -19,6 +19,12 @@ namespace kobuki_msgs
       enum { RAISED =  0 };
       enum { DROPPED =  1 };
 
+    WheelDropEvent():
+      wheel(0),
+      state(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

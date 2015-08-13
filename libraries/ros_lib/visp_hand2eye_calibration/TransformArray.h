@@ -19,6 +19,12 @@ namespace visp_hand2eye_calibration
       geometry_msgs::Transform st_transforms;
       geometry_msgs::Transform * transforms;
 
+    TransformArray():
+      header(),
+      transforms_length(0), transforms(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

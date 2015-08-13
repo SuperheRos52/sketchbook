@@ -14,6 +14,10 @@ static const char RELAX[] = "arbotix_msgs/Relax";
   {
     public:
 
+    RelaxRequest()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -34,6 +38,10 @@ static const char RELAX[] = "arbotix_msgs/Relax";
   class RelaxResponse : public ros::Msg
   {
     public:
+
+    RelaxResponse()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

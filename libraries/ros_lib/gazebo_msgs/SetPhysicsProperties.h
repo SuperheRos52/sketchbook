@@ -20,6 +20,14 @@ static const char SETPHYSICSPROPERTIES[] = "gazebo_msgs/SetPhysicsProperties";
       geometry_msgs::Vector3 gravity;
       gazebo_msgs::ODEPhysics ode_config;
 
+    SetPhysicsPropertiesRequest():
+      time_step(0),
+      max_update_rate(0),
+      gravity(),
+      ode_config()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -50,6 +58,12 @@ static const char SETPHYSICSPROPERTIES[] = "gazebo_msgs/SetPhysicsProperties";
     public:
       bool success;
       const char* status_message;
+
+    SetPhysicsPropertiesResponse():
+      success(0),
+      status_message("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

@@ -21,6 +21,15 @@ static const char SETJOINTTRAJECTORY[] = "gazebo_msgs/SetJointTrajectory";
       bool set_model_pose;
       bool disable_physics_updates;
 
+    SetJointTrajectoryRequest():
+      model_name(""),
+      joint_trajectory(),
+      model_pose(),
+      set_model_pose(0),
+      disable_physics_updates(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -91,6 +100,12 @@ static const char SETJOINTTRAJECTORY[] = "gazebo_msgs/SetJointTrajectory";
     public:
       bool success;
       const char* status_message;
+
+    SetJointTrajectoryResponse():
+      success(0),
+      status_message("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

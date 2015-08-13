@@ -15,6 +15,11 @@ static const char KILL[] = "turtlesim/Kill";
     public:
       const char* name;
 
+    KillRequest():
+      name("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -49,6 +54,10 @@ static const char KILL[] = "turtlesim/Kill";
   class KillResponse : public ros::Msg
   {
     public:
+
+    KillResponse()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

@@ -18,6 +18,15 @@ namespace visp_camera_calibration
       float Y;
       float Z;
 
+    CalibPoint():
+      i(0),
+      j(0),
+      X(0),
+      Y(0),
+      Z(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

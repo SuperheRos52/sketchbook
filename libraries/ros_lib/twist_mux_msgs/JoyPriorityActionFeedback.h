@@ -19,6 +19,13 @@ namespace twist_mux_msgs
       actionlib_msgs::GoalStatus status;
       twist_mux_msgs::JoyPriorityFeedback feedback;
 
+    JoyPriorityActionFeedback():
+      header(),
+      status(),
+      feedback()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

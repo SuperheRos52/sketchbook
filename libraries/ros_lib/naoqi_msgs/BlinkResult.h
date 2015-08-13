@@ -14,6 +14,11 @@ namespace naoqi_msgs
     public:
       bool still_blinking;
 
+    BlinkResult():
+      still_blinking(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

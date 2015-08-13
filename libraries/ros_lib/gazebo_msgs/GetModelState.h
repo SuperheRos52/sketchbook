@@ -18,6 +18,12 @@ static const char GETMODELSTATE[] = "gazebo_msgs/GetModelState";
       const char* model_name;
       const char* relative_entity_name;
 
+    GetModelStateRequest():
+      model_name(""),
+      relative_entity_name("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -70,6 +76,14 @@ static const char GETMODELSTATE[] = "gazebo_msgs/GetModelState";
       geometry_msgs::Twist twist;
       bool success;
       const char* status_message;
+
+    GetModelStateResponse():
+      pose(),
+      twist(),
+      success(0),
+      status_message("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

@@ -14,6 +14,11 @@ namespace naoqi_msgs
     public:
       const char* pose_name;
 
+    BodyPoseGoal():
+      pose_name("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

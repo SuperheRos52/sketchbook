@@ -17,6 +17,12 @@ namespace rocon_service_pair_msgs
       rocon_service_pair_msgs::TestiesPairRequest pair_request;
       rocon_service_pair_msgs::TestiesPairResponse pair_response;
 
+    TestiesPair():
+      pair_request(),
+      pair_response()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

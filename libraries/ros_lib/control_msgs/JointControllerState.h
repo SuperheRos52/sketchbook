@@ -25,6 +25,21 @@ namespace control_msgs
       float d;
       float i_clamp;
 
+    JointControllerState():
+      header(),
+      set_point(0),
+      process_value(0),
+      process_value_dot(0),
+      error(0),
+      time_step(0),
+      command(0),
+      p(0),
+      i(0),
+      d(0),
+      i_clamp(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

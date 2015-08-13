@@ -16,6 +16,13 @@ namespace visp_tracker
       float j;
       int32_t id;
 
+    KltPoint():
+      i(0),
+      j(0),
+      id(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

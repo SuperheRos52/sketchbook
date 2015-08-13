@@ -30,6 +30,24 @@ namespace ardrone_autonomy
       ardrone_autonomy::vector21 est_vb;
       uint32_t est_state;
 
+    navdata_altitude():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      altitude_vision(0),
+      altitude_vz(0),
+      altitude_ref(0),
+      altitude_raw(0),
+      obs_accZ(0),
+      obs_alt(0),
+      obs_x(),
+      obs_state(0),
+      est_vb(),
+      est_state(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

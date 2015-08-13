@@ -25,6 +25,16 @@ namespace ardrone_autonomy
       ardrone_autonomy::vector21 st_point;
       ardrone_autonomy::vector21 * point;
 
+    navdata_trackers_send():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      locked_length(0), locked(NULL),
+      point_length(0), point(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

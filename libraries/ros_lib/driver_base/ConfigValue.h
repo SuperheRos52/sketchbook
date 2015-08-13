@@ -15,6 +15,12 @@ namespace driver_base
       const char* name;
       float value;
 
+    ConfigValue():
+      name(""),
+      value(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

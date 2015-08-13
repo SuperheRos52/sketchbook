@@ -15,6 +15,12 @@ namespace rocon_interaction_msgs
       const char* rapp;
       const char* remocon;
 
+    Pair():
+      rapp(""),
+      remocon("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

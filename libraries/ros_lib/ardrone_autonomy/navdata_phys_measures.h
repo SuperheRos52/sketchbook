@@ -29,6 +29,21 @@ namespace ardrone_autonomy
       uint32_t vrefEpson;
       uint32_t vrefIDG;
 
+    navdata_phys_measures():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      accs_temp(0),
+      gyro_temp(0),
+      phys_accs_length(0), phys_accs(NULL),
+      phys_gyros_length(0), phys_gyros(NULL),
+      alim3V3(0),
+      vrefEpson(0),
+      vrefIDG(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

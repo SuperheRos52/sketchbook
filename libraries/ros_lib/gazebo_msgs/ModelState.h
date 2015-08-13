@@ -19,6 +19,14 @@ namespace gazebo_msgs
       geometry_msgs::Twist twist;
       const char* reference_frame;
 
+    ModelState():
+      model_name(""),
+      pose(),
+      twist(),
+      reference_frame("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

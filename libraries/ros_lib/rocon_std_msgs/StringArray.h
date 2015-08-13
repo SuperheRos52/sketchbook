@@ -16,6 +16,11 @@ namespace rocon_std_msgs
       char* st_strings;
       char* * strings;
 
+    StringArray():
+      strings_length(0), strings(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

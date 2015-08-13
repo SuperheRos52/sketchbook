@@ -19,6 +19,12 @@ static const char SETINTERACTIONS[] = "rocon_interaction_msgs/SetInteractions";
       rocon_interaction_msgs::Interaction * interactions;
       bool load;
 
+    SetInteractionsRequest():
+      interactions_length(0), interactions(NULL),
+      load(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -71,6 +77,11 @@ static const char SETINTERACTIONS[] = "rocon_interaction_msgs/SetInteractions";
   {
     public:
       bool result;
+
+    SetInteractionsResponse():
+      result(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

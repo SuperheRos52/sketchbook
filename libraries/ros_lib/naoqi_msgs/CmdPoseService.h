@@ -16,6 +16,11 @@ static const char CMDPOSESERVICE[] = "naoqi_msgs/CmdPoseService";
     public:
       geometry_msgs::Pose2D pose;
 
+    CmdPoseServiceRequest():
+      pose()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -38,6 +43,10 @@ static const char CMDPOSESERVICE[] = "naoqi_msgs/CmdPoseService";
   class CmdPoseServiceResponse : public ros::Msg
   {
     public:
+
+    CmdPoseServiceResponse()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

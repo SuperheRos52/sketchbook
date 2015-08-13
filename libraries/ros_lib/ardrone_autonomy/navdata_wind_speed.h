@@ -31,6 +31,27 @@ namespace ardrone_autonomy
       float magneto_debug2;
       float magneto_debug3;
 
+    navdata_wind_speed():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      wind_speed(0),
+      wind_angle(0),
+      wind_compensation_theta(0),
+      wind_compensation_phi(0),
+      state_x1(0),
+      state_x2(0),
+      state_x3(0),
+      state_x4(0),
+      state_x5(0),
+      state_x6(0),
+      magneto_debug1(0),
+      magneto_debug2(0),
+      magneto_debug3(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

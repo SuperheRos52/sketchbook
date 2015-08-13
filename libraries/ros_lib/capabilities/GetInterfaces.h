@@ -14,6 +14,10 @@ static const char GETINTERFACES[] = "capabilities/GetInterfaces";
   {
     public:
 
+    GetInterfacesRequest()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -37,6 +41,11 @@ static const char GETINTERFACES[] = "capabilities/GetInterfaces";
       uint8_t interfaces_length;
       char* st_interfaces;
       char* * interfaces;
+
+    GetInterfacesResponse():
+      interfaces_length(0), interfaces(NULL)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

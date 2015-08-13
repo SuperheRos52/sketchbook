@@ -19,6 +19,12 @@ namespace controller_manager_msgs
       controller_manager_msgs::ControllerStatistics st_controller;
       controller_manager_msgs::ControllerStatistics * controller;
 
+    ControllersStatistics():
+      header(),
+      controller_length(0), controller(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

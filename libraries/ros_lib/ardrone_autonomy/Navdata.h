@@ -62,6 +62,44 @@ namespace ardrone_autonomy
       float * tags_distance;
       float tm;
 
+    Navdata():
+      header(),
+      batteryPercent(0),
+      state(0),
+      magX(0),
+      magY(0),
+      magZ(0),
+      pressure(0),
+      temp(0),
+      wind_speed(0),
+      wind_angle(0),
+      wind_comp_angle(0),
+      rotX(0),
+      rotY(0),
+      rotZ(0),
+      altd(0),
+      vx(0),
+      vy(0),
+      vz(0),
+      ax(0),
+      ay(0),
+      az(0),
+      motor1(0),
+      motor2(0),
+      motor3(0),
+      motor4(0),
+      tags_count(0),
+      tags_type_length(0), tags_type(NULL),
+      tags_xc_length(0), tags_xc(NULL),
+      tags_yc_length(0), tags_yc(NULL),
+      tags_width_length(0), tags_width(NULL),
+      tags_height_length(0), tags_height(NULL),
+      tags_orientation_length(0), tags_orientation(NULL),
+      tags_distance_length(0), tags_distance(NULL),
+      tm(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

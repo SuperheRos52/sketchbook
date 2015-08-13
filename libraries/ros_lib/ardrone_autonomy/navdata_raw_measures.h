@@ -37,6 +37,29 @@ namespace ardrone_autonomy
       int32_t alt_temp_raw;
       int16_t gradient;
 
+    navdata_raw_measures():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      raw_gyros_length(0), raw_gyros(NULL),
+      raw_gyros_110_length(0), raw_gyros_110(NULL),
+      vbat_raw(0),
+      us_debut_echo(0),
+      us_fin_echo(0),
+      us_association_echo(0),
+      us_distance_echo(0),
+      us_courbe_temps(0),
+      us_courbe_valeur(0),
+      us_courbe_ref(0),
+      flag_echo_ini(0),
+      nb_echo(0),
+      sum_echo(0),
+      alt_temp_raw(0),
+      gradient(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

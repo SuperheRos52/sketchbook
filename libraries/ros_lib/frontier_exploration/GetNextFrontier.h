@@ -16,6 +16,11 @@ static const char GETNEXTFRONTIER[] = "frontier_exploration/GetNextFrontier";
     public:
       geometry_msgs::PoseStamped start_pose;
 
+    GetNextFrontierRequest():
+      start_pose()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -39,6 +44,11 @@ static const char GETNEXTFRONTIER[] = "frontier_exploration/GetNextFrontier";
   {
     public:
       geometry_msgs::PoseStamped next_frontier;
+
+    GetNextFrontierResponse():
+      next_frontier()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

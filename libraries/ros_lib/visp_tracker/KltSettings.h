@@ -19,9 +19,19 @@ namespace visp_tracker
       float harris;
       int64_t size_block;
       int64_t pyramid_lvl;
-      float angle_appear;
-      float angle_disappear;
       int64_t mask_border;
+
+    KltSettings():
+      max_features(0),
+      window_size(0),
+      quality(0),
+      min_distance(0),
+      harris(0),
+      size_block(0),
+      pyramid_lvl(0),
+      mask_border(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {
@@ -85,8 +95,6 @@ namespace visp_tracker
       *(outbuffer + offset + 6) = (u_pyramid_lvl.base >> (8 * 6)) & 0xFF;
       *(outbuffer + offset + 7) = (u_pyramid_lvl.base >> (8 * 7)) & 0xFF;
       offset += sizeof(this->pyramid_lvl);
-      offset += serializeAvrFloat64(outbuffer + offset, this->angle_appear);
-      offset += serializeAvrFloat64(outbuffer + offset, this->angle_disappear);
       union {
         int64_t real;
         uint64_t base;
@@ -170,8 +178,6 @@ namespace visp_tracker
       u_pyramid_lvl.base |= ((uint64_t) (*(inbuffer + offset + 7))) << (8 * 7);
       this->pyramid_lvl = u_pyramid_lvl.real;
       offset += sizeof(this->pyramid_lvl);
-      offset += deserializeAvrFloat64(inbuffer + offset, &(this->angle_appear));
-      offset += deserializeAvrFloat64(inbuffer + offset, &(this->angle_disappear));
       union {
         int64_t real;
         uint64_t base;
@@ -191,7 +197,7 @@ namespace visp_tracker
     }
 
     const char * getType(){ return "visp_tracker/KltSettings"; };
-    const char * getMD5(){ return "a9f61cd7210b4d3872b77b5d1101b830"; };
+    const char * getMD5(){ return "7cd8ae2f3a31d26015e8c80e88eb027a"; };
 
   };
 

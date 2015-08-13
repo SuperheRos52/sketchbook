@@ -14,6 +14,11 @@ namespace rocon_service_pair_msgs
     public:
       const char* data;
 
+    TestiesRequest():
+      data("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

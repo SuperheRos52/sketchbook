@@ -22,6 +22,19 @@ namespace ardrone_autonomy
       float m32;
       float m33;
 
+    matrix33():
+      m11(0),
+      m12(0),
+      m13(0),
+      m21(0),
+      m22(0),
+      m23(0),
+      m31(0),
+      m32(0),
+      m33(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

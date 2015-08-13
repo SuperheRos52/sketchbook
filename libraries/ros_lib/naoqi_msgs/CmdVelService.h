@@ -16,6 +16,11 @@ static const char CMDVELSERVICE[] = "naoqi_msgs/CmdVelService";
     public:
       geometry_msgs::Twist twist;
 
+    CmdVelServiceRequest():
+      twist()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -38,6 +43,10 @@ static const char CMDVELSERVICE[] = "naoqi_msgs/CmdVelService";
   class CmdVelServiceResponse : public ros::Msg
   {
     public:
+
+    CmdVelServiceResponse()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

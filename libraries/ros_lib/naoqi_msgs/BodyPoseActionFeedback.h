@@ -19,6 +19,13 @@ namespace naoqi_msgs
       actionlib_msgs::GoalStatus status;
       naoqi_msgs::BodyPoseFeedback feedback;
 
+    BodyPoseActionFeedback():
+      header(),
+      status(),
+      feedback()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

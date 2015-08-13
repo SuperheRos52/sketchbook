@@ -15,6 +15,10 @@ static const char GETRUNNINGCAPABILITIES[] = "capabilities/GetRunningCapabilitie
   {
     public:
 
+    GetRunningCapabilitiesRequest()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -38,6 +42,11 @@ static const char GETRUNNINGCAPABILITIES[] = "capabilities/GetRunningCapabilitie
       uint8_t running_capabilities_length;
       capabilities::RunningCapability st_running_capabilities;
       capabilities::RunningCapability * running_capabilities;
+
+    GetRunningCapabilitiesResponse():
+      running_capabilities_length(0), running_capabilities(NULL)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

@@ -17,6 +17,13 @@ static const char LEDANIM[] = "ardrone_autonomy/LedAnim";
       float freq;
       uint8_t duration;
 
+    LedAnimRequest():
+      type(0),
+      freq(0),
+      duration(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -67,6 +74,11 @@ static const char LEDANIM[] = "ardrone_autonomy/LedAnim";
   {
     public:
       bool result;
+
+    LedAnimResponse():
+      result(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

@@ -16,6 +16,12 @@ namespace rocon_service_pair_msgs
       uuid_msgs::UniqueID id;
       const char* data;
 
+    TestiesResponse():
+      id(),
+      data("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

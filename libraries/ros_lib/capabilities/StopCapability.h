@@ -15,6 +15,11 @@ static const char STOPCAPABILITY[] = "capabilities/StopCapability";
     public:
       const char* capability;
 
+    StopCapabilityRequest():
+      capability("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -50,6 +55,11 @@ static const char STOPCAPABILITY[] = "capabilities/StopCapability";
   {
     public:
       bool successful;
+
+    StopCapabilityResponse():
+      successful(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

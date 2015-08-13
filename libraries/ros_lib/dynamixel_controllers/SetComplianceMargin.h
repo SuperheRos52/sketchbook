@@ -15,6 +15,11 @@ static const char SETCOMPLIANCEMARGIN[] = "dynamixel_controllers/SetComplianceMa
     public:
       uint8_t margin;
 
+    SetComplianceMarginRequest():
+      margin(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -39,6 +44,10 @@ static const char SETCOMPLIANCEMARGIN[] = "dynamixel_controllers/SetComplianceMa
   class SetComplianceMarginResponse : public ros::Msg
   {
     public:
+
+    SetComplianceMarginResponse()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

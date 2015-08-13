@@ -22,6 +22,15 @@ static const char GETPOLLEDIMAGE[] = "polled_camera/GetPolledImage";
       uint32_t binning_y;
       sensor_msgs::RegionOfInterest roi;
 
+    GetPolledImageRequest():
+      response_namespace(""),
+      timeout(),
+      binning_x(0),
+      binning_y(0),
+      roi()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -101,6 +110,13 @@ static const char GETPOLLEDIMAGE[] = "polled_camera/GetPolledImage";
       bool success;
       const char* status_message;
       ros::Time stamp;
+
+    GetPolledImageResponse():
+      success(0),
+      status_message(""),
+      stamp()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

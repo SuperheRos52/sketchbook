@@ -31,6 +31,17 @@ namespace smach_msgs
       char* st_container_outcomes;
       char* * container_outcomes;
 
+    SmachContainerStructure():
+      header(),
+      path(""),
+      children_length(0), children(NULL),
+      internal_outcomes_length(0), internal_outcomes(NULL),
+      outcomes_from_length(0), outcomes_from(NULL),
+      outcomes_to_length(0), outcomes_to(NULL),
+      container_outcomes_length(0), container_outcomes(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

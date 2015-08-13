@@ -19,6 +19,13 @@ namespace frontier_exploration
       actionlib_msgs::GoalStatus status;
       frontier_exploration::ExploreTaskResult result;
 
+    ExploreTaskActionResult():
+      header(),
+      status(),
+      result()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

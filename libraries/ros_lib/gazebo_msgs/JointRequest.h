@@ -15,6 +15,11 @@ static const char JOINTREQUEST[] = "gazebo_msgs/JointRequest";
     public:
       const char* joint_name;
 
+    JointRequestRequest():
+      joint_name("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -49,6 +54,10 @@ static const char JOINTREQUEST[] = "gazebo_msgs/JointRequest";
   class JointRequestResponse : public ros::Msg
   {
     public:
+
+    JointRequestResponse()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

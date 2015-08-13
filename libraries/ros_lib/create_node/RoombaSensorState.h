@@ -41,6 +41,31 @@ namespace create_node
       enum { CHARGING_WAITING =  4 };
       enum { CHARGING_CHARGING_ERROR =  5 };
 
+    RoombaSensorState():
+      header(),
+      bumps_wheeldrops(0),
+      wall(0),
+      cliff_left(0),
+      cliff_front_left(0),
+      cliff_front_right(0),
+      cliff_right(0),
+      virtual_wall(0),
+      motor_overcurrents(0),
+      dirt_detector_left(0),
+      dirt_detector_right(0),
+      remote_opcode(0),
+      buttons(0),
+      distance(0),
+      angle(0),
+      charging_state(0),
+      voltage(0),
+      current(0),
+      temperature(0),
+      charge(0),
+      capacity(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

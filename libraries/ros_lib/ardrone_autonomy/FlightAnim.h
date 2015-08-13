@@ -16,6 +16,12 @@ static const char FLIGHTANIM[] = "ardrone_autonomy/FlightAnim";
       uint8_t type;
       uint32_t duration;
 
+    FlightAnimRequest():
+      type(0),
+      duration(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -51,6 +57,11 @@ static const char FLIGHTANIM[] = "ardrone_autonomy/FlightAnim";
   {
     public:
       bool result;
+
+    FlightAnimResponse():
+      result(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

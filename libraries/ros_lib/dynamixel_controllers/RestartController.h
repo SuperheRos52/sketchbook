@@ -22,6 +22,16 @@ static const char RESTARTCONTROLLER[] = "dynamixel_controllers/RestartController
       char* st_dependencies;
       char* * dependencies;
 
+    RestartControllerRequest():
+      port_name(""),
+      package_path(""),
+      module_name(""),
+      class_name(""),
+      controller_name(""),
+      dependencies_length(0), dependencies(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -142,6 +152,12 @@ static const char RESTARTCONTROLLER[] = "dynamixel_controllers/RestartController
     public:
       bool success;
       const char* reason;
+
+    RestartControllerResponse():
+      success(0),
+      reason("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

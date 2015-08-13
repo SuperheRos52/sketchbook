@@ -17,6 +17,12 @@ static const char SETJOINTPROPERTIES[] = "gazebo_msgs/SetJointProperties";
       const char* joint_name;
       gazebo_msgs::ODEJointProperties ode_joint_config;
 
+    SetJointPropertiesRequest():
+      joint_name(""),
+      ode_joint_config()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -55,6 +61,12 @@ static const char SETJOINTPROPERTIES[] = "gazebo_msgs/SetJointProperties";
     public:
       bool success;
       const char* status_message;
+
+    SetJointPropertiesResponse():
+      success(0),
+      status_message("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

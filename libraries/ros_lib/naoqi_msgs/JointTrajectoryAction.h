@@ -19,6 +19,13 @@ namespace naoqi_msgs
       naoqi_msgs::JointTrajectoryActionResult action_result;
       naoqi_msgs::JointTrajectoryActionFeedback action_feedback;
 
+    JointTrajectoryAction():
+      action_goal(),
+      action_result(),
+      action_feedback()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

@@ -16,6 +16,13 @@ namespace visp_tracker
       float y;
       int32_t suppress;
 
+    MovingEdgeSite():
+      x(0),
+      y(0),
+      suppress(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

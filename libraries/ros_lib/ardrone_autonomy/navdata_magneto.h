@@ -33,6 +33,28 @@ namespace ardrone_autonomy
       float error_mean;
       float error_var;
 
+    navdata_magneto():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      mx(0),
+      my(0),
+      mz(0),
+      magneto_raw(),
+      magneto_rectified(),
+      magneto_offset(),
+      heading_unwrapped(0),
+      heading_gyro_unwrapped(0),
+      heading_fusion_unwrapped(0),
+      magneto_calibration_ok(0),
+      magneto_state(0),
+      magneto_radius(0),
+      error_mean(0),
+      error_var(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

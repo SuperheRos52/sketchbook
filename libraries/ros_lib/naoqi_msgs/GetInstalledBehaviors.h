@@ -14,6 +14,10 @@ static const char GETINSTALLEDBEHAVIORS[] = "naoqi_msgs/GetInstalledBehaviors";
   {
     public:
 
+    GetInstalledBehaviorsRequest()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -37,6 +41,11 @@ static const char GETINSTALLEDBEHAVIORS[] = "naoqi_msgs/GetInstalledBehaviors";
       uint8_t behaviors_length;
       char* st_behaviors;
       char* * behaviors;
+
+    GetInstalledBehaviorsResponse():
+      behaviors_length(0), behaviors(NULL)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

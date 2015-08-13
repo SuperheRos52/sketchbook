@@ -17,6 +17,14 @@ namespace control_msgs
       float velocity;
       float acceleration;
 
+    JointTolerance():
+      name(""),
+      position(0),
+      velocity(0),
+      acceleration(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

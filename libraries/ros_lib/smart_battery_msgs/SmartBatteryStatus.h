@@ -26,6 +26,19 @@ namespace smart_battery_msgs
       enum { CHARGING =  1 };
       enum { CHARGED =  2 };
 
+    SmartBatteryStatus():
+      header(),
+      voltage(0),
+      rate(0),
+      charge(0),
+      capacity(0),
+      design_capacity(0),
+      percentage(0),
+      charge_state(0),
+      present(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

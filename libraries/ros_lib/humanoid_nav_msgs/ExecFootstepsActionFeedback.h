@@ -19,6 +19,13 @@ namespace humanoid_nav_msgs
       actionlib_msgs::GoalStatus status;
       humanoid_nav_msgs::ExecFootstepsFeedback feedback;
 
+    ExecFootstepsActionFeedback():
+      header(),
+      status(),
+      feedback()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

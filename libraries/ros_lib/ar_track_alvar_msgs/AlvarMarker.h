@@ -19,6 +19,14 @@ namespace ar_track_alvar_msgs
       uint32_t confidence;
       geometry_msgs::PoseStamped pose;
 
+    AlvarMarker():
+      header(),
+      id(0),
+      confidence(0),
+      pose()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

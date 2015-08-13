@@ -16,6 +16,12 @@ static const char SETARMSENABLED[] = "naoqi_msgs/SetArmsEnabled";
       bool left_arm;
       bool right_arm;
 
+    SetArmsEnabledRequest():
+      left_arm(0),
+      right_arm(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -66,6 +72,10 @@ static const char SETARMSENABLED[] = "naoqi_msgs/SetArmsEnabled";
   class SetArmsEnabledResponse : public ros::Msg
   {
     public:
+
+    SetArmsEnabledResponse()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

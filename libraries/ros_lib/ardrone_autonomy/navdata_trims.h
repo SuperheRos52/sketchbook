@@ -21,6 +21,17 @@ namespace ardrone_autonomy
       float euler_angles_trim_theta;
       float euler_angles_trim_phi;
 
+    navdata_trims():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      angular_rates_trim_r(0),
+      euler_angles_trim_theta(0),
+      euler_angles_trim_phi(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

@@ -15,6 +15,10 @@ static const char GETPLATFORMINFO[] = "rocon_std_msgs/GetPlatformInfo";
   {
     public:
 
+    GetPlatformInfoRequest()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -36,6 +40,11 @@ static const char GETPLATFORMINFO[] = "rocon_std_msgs/GetPlatformInfo";
   {
     public:
       rocon_std_msgs::PlatformInfo platform_info;
+
+    GetPlatformInfoResponse():
+      platform_info()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

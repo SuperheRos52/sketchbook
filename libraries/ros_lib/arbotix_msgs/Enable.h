@@ -15,6 +15,11 @@ static const char ENABLE[] = "arbotix_msgs/Enable";
     public:
       bool enable;
 
+    EnableRequest():
+      enable(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -51,6 +56,11 @@ static const char ENABLE[] = "arbotix_msgs/Enable";
   {
     public:
       bool state;
+
+    EnableResponse():
+      state(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

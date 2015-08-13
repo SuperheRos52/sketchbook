@@ -33,6 +33,10 @@ namespace gateway_msgs
       enum { REMOTE_GATEWAY_SELF_IS_NOT =  52 };
       enum { REMOTE_GATEWAY_TARGET_HAS_MULTIPLE_MATCHES =  53 };
 
+    ErrorCodes()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

@@ -31,6 +31,22 @@ namespace rocon_interaction_msgs
       const char* role;
       enum { UNLIMITED_INTERACTIONS =  -1 };
 
+    Interaction():
+      name(""),
+      compatibility(""),
+      display_name(""),
+      description(""),
+      namespace(""),
+      icon(),
+      remappings_length(0), remappings(NULL),
+      parameters(""),
+      max(0),
+      pairing(),
+      hash(0),
+      role("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

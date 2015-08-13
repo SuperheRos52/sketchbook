@@ -86,6 +86,47 @@ namespace create_node
       enum { CHARGING_WAITING =  4 };
       enum { CHARGING_CHARGING_ERROR =  5 };
 
+    RawTurtlebotSensorState():
+      header(),
+      bumps_wheeldrops(0),
+      wall(0),
+      cliff_left(0),
+      cliff_front_left(0),
+      cliff_front_right(0),
+      cliff_right(0),
+      virtual_wall(0),
+      motor_overcurrents(0),
+      dirt_detector_left(0),
+      dirt_detector_right(0),
+      remote_opcode(0),
+      buttons(0),
+      distance(0),
+      angle(0),
+      charging_state(0),
+      voltage(0),
+      current(0),
+      temperature(0),
+      charge(0),
+      capacity(0),
+      wall_signal(0),
+      cliff_left_signal(0),
+      cliff_front_left_signal(0),
+      cliff_front_right_signal(0),
+      cliff_right_signal(0),
+      user_digital_inputs(0),
+      user_analog_input(0),
+      charging_sources_available(0),
+      oi_mode(0),
+      song_number(0),
+      song_playing(0),
+      number_of_stream_packets(0),
+      requested_velocity(0),
+      requested_radius(0),
+      requested_right_velocity(0),
+      requested_left_velocity(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

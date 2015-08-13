@@ -16,6 +16,11 @@ static const char GETREMAPPINGS[] = "capabilities/GetRemappings";
     public:
       const char* spec;
 
+    GetRemappingsRequest():
+      spec("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -62,6 +67,14 @@ static const char GETREMAPPINGS[] = "capabilities/GetRemappings";
       uint8_t parameters_length;
       capabilities::Remapping st_parameters;
       capabilities::Remapping * parameters;
+
+    GetRemappingsResponse():
+      topics_length(0), topics(NULL),
+      services_length(0), services(NULL),
+      actions_length(0), actions(NULL),
+      parameters_length(0), parameters(NULL)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

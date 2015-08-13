@@ -19,6 +19,13 @@ namespace humanoid_nav_msgs
       actionlib_msgs::GoalID goal_id;
       humanoid_nav_msgs::ExecFootstepsGoal goal;
 
+    ExecFootstepsActionGoal():
+      header(),
+      goal_id(),
+      goal()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

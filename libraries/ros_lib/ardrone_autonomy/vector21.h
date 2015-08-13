@@ -15,6 +15,12 @@ namespace ardrone_autonomy
       float x;
       float y;
 
+    vector21():
+      x(0),
+      y(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

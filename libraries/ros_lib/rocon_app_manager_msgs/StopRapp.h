@@ -14,6 +14,10 @@ static const char STOPRAPP[] = "rocon_app_manager_msgs/StopRapp";
   {
     public:
 
+    StopRappRequest()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -37,6 +41,13 @@ static const char STOPRAPP[] = "rocon_app_manager_msgs/StopRapp";
       bool stopped;
       int32_t error_code;
       const char* message;
+
+    StopRappResponse():
+      stopped(0),
+      error_code(0),
+      message("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

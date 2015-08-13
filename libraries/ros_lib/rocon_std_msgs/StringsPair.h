@@ -17,6 +17,12 @@ namespace rocon_std_msgs
       rocon_std_msgs::StringsPairRequest pair_request;
       rocon_std_msgs::StringsPairResponse pair_response;
 
+    StringsPair():
+      pair_request(),
+      pair_response()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

@@ -25,6 +25,15 @@ namespace naoqi_msgs
       float * times;
       uint8_t relative;
 
+    JointAngleTrajectory():
+      header(),
+      joint_names_length(0), joint_names(NULL),
+      joint_angles_length(0), joint_angles(NULL),
+      times_length(0), times(NULL),
+      relative(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

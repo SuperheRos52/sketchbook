@@ -20,6 +20,15 @@ namespace controller_manager_msgs
       char* st_resources;
       char* * resources;
 
+    ControllerState():
+      name(""),
+      state(""),
+      type(""),
+      hardware_interface(""),
+      resources_length(0), resources(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

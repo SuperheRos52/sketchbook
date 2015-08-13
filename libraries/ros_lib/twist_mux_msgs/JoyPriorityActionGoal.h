@@ -19,6 +19,13 @@ namespace twist_mux_msgs
       actionlib_msgs::GoalID goal_id;
       twist_mux_msgs::JoyPriorityGoal goal;
 
+    JoyPriorityActionGoal():
+      header(),
+      goal_id(),
+      goal()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

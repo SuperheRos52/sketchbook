@@ -16,6 +16,12 @@ namespace rospy_tutorials
       std_msgs::Header header;
       const char* data;
 
+    HeaderString():
+      header(),
+      data("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

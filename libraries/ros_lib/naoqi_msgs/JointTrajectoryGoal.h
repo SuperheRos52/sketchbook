@@ -16,6 +16,12 @@ namespace naoqi_msgs
       trajectory_msgs::JointTrajectory trajectory;
       uint8_t relative;
 
+    JointTrajectoryGoal():
+      trajectory(),
+      relative(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

@@ -21,6 +21,12 @@ namespace control_msgs
       enum { PATH_TOLERANCE_VIOLATED =  -4 };
       enum { GOAL_TOLERANCE_VIOLATED =  -5 };
 
+    FollowJointTrajectoryResult():
+      error_code(0),
+      error_string("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

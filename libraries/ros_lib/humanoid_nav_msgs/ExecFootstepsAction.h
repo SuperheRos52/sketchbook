@@ -19,6 +19,13 @@ namespace humanoid_nav_msgs
       humanoid_nav_msgs::ExecFootstepsActionResult action_result;
       humanoid_nav_msgs::ExecFootstepsActionFeedback action_feedback;
 
+    ExecFootstepsAction():
+      action_goal(),
+      action_result(),
+      action_feedback()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

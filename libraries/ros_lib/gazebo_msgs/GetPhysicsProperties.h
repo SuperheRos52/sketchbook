@@ -16,6 +16,10 @@ static const char GETPHYSICSPROPERTIES[] = "gazebo_msgs/GetPhysicsProperties";
   {
     public:
 
+    GetPhysicsPropertiesRequest()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -43,6 +47,17 @@ static const char GETPHYSICSPROPERTIES[] = "gazebo_msgs/GetPhysicsProperties";
       gazebo_msgs::ODEPhysics ode_config;
       bool success;
       const char* status_message;
+
+    GetPhysicsPropertiesResponse():
+      time_step(0),
+      pause(0),
+      max_update_rate(0),
+      gravity(),
+      ode_config(),
+      success(0),
+      status_message("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

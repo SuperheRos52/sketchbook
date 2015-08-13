@@ -19,6 +19,14 @@ namespace kobuki_msgs
       enum { DEFAULT =   0 };
       enum { USER_CONFIGURED =   1 };
 
+    ControllerInfo():
+      type(0),
+      p_gain(0),
+      i_gain(0),
+      d_gain(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

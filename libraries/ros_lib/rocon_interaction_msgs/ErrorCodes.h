@@ -22,6 +22,10 @@ namespace rocon_interaction_msgs
       enum { MSG_START_PAIRED_RAPP_FAILED =  "Failed to start the paired rapp." };
       enum { MSG_ALREADY_PAIRING =  "Already pairing, cannot start another pairing." };
 
+    ErrorCodes()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

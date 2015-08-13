@@ -39,6 +39,34 @@ namespace ardrone_autonomy
       float gold_x;
       float gold_y;
 
+    navdata_vision():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      vision_state(0),
+      vision_misc(0),
+      vision_phi_trim(0),
+      vision_phi_ref_prop(0),
+      vision_theta_trim(0),
+      vision_theta_ref_prop(0),
+      new_raw_picture(0),
+      theta_capture(0),
+      phi_capture(0),
+      psi_capture(0),
+      altitude_capture(0),
+      time_capture(0),
+      body_v(),
+      delta_phi(0),
+      delta_theta(0),
+      delta_psi(0),
+      gold_defined(0),
+      gold_reset(0),
+      gold_x(0),
+      gold_y(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

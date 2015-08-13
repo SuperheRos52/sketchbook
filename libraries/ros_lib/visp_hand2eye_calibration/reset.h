@@ -14,6 +14,10 @@ static const char RESET[] = "visp_hand2eye_calibration/reset";
   {
     public:
 
+    resetRequest()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -34,6 +38,10 @@ static const char RESET[] = "visp_hand2eye_calibration/reset";
   class resetResponse : public ros::Msg
   {
     public:
+
+    resetResponse()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

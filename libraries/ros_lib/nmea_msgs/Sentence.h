@@ -16,6 +16,12 @@ namespace nmea_msgs
       std_msgs::Header header;
       const char* sentence;
 
+    Sentence():
+      header(),
+      sentence("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

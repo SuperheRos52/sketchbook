@@ -21,6 +21,15 @@ namespace ardrone_autonomy
       float st_offset_g;
       float * offset_g;
 
+    navdata_gyros_offsets():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      offset_g_length(0), offset_g(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

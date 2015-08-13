@@ -19,6 +19,13 @@ namespace frontier_exploration
       actionlib_msgs::GoalID goal_id;
       frontier_exploration::ExploreTaskGoal goal;
 
+    ExploreTaskActionGoal():
+      header(),
+      goal_id(),
+      goal()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

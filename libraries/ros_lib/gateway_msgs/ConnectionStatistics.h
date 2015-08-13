@@ -28,6 +28,22 @@ namespace gateway_msgs
       enum { WIRELESS =  2 };
       enum { MAX_TTL =  86400 };
 
+    ConnectionStatistics():
+      gateway_available(0),
+      time_since_last_seen(0),
+      ping_latency_min(0),
+      ping_latency_max(0),
+      ping_latency_avg(0),
+      ping_latency_mdev(0),
+      network_info_available(0),
+      network_type(0),
+      wireless_bitrate(0),
+      wireless_link_quality(0),
+      wireless_signal_level(0),
+      wireless_noise_level(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

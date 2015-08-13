@@ -16,6 +16,13 @@ namespace gateway_msgs
       const char* name;
       const char* node;
 
+    Rule():
+      type(""),
+      name(""),
+      node("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

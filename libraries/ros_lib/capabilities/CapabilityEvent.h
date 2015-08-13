@@ -23,6 +23,15 @@ namespace capabilities
       enum { TERMINATED = "terminated" };
       enum { SERVER_READY = "server_ready" };
 
+    CapabilityEvent():
+      header(),
+      capability(""),
+      provider(""),
+      type(""),
+      pid(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

@@ -19,6 +19,13 @@ namespace naoqi_msgs
       actionlib_msgs::GoalStatus status;
       naoqi_msgs::BodyPoseWithSpeedResult result;
 
+    BodyPoseWithSpeedActionResult():
+      header(),
+      status(),
+      result()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

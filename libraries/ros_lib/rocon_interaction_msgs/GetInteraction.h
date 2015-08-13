@@ -16,6 +16,11 @@ static const char GETINTERACTION[] = "rocon_interaction_msgs/GetInteraction";
     public:
       int32_t hash;
 
+    GetInteractionRequest():
+      hash(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -59,6 +64,12 @@ static const char GETINTERACTION[] = "rocon_interaction_msgs/GetInteraction";
     public:
       bool result;
       rocon_interaction_msgs::Interaction interaction;
+
+    GetInteractionResponse():
+      result(0),
+      interaction()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

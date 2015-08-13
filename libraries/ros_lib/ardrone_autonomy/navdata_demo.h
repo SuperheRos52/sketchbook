@@ -29,6 +29,25 @@ namespace ardrone_autonomy
       uint32_t num_frames;
       uint32_t detection_camera_type;
 
+    navdata_demo():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      ctrl_state(0),
+      vbat_flying_percentage(0),
+      theta(0),
+      phi(0),
+      psi(0),
+      altitude(0),
+      vx(0),
+      vy(0),
+      vz(0),
+      num_frames(0),
+      detection_camera_type(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

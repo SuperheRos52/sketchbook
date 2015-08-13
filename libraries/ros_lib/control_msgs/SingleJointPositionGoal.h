@@ -17,6 +17,13 @@ namespace control_msgs
       ros::Duration min_duration;
       float max_velocity;
 
+    SingleJointPositionGoal():
+      position(0),
+      min_duration(),
+      max_velocity(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

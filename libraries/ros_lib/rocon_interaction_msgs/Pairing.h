@@ -22,6 +22,13 @@ namespace rocon_interaction_msgs
       rocon_std_msgs::KeyValue st_parameters;
       rocon_std_msgs::KeyValue * parameters;
 
+    Pairing():
+      rapp(""),
+      remappings_length(0), remappings(NULL),
+      parameters_length(0), parameters(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

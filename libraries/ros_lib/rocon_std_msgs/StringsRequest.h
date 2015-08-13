@@ -14,6 +14,11 @@ namespace rocon_std_msgs
     public:
       const char* data;
 
+    StringsRequest():
+      data("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

@@ -21,6 +21,11 @@ namespace kobuki_msgs
       enum { CLEANINGSTART =  5 };
       enum { CLEANINGEND =  6 };
 
+    Sound():
+      value(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

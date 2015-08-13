@@ -25,6 +25,21 @@ namespace ardrone_autonomy
       uint32_t frame_number;
       uint32_t usbkey_remaining_time;
 
+    navdata_hdvideo_stream():
+      header(),
+      drone_time(0),
+      tag(0),
+      size(0),
+      hdvideo_state(0),
+      storage_fifo_nb_packets(0),
+      storage_fifo_size(0),
+      usbkey_size(0),
+      usbkey_freespace(0),
+      frame_number(0),
+      usbkey_remaining_time(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

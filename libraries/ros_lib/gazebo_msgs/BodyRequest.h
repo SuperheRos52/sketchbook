@@ -15,6 +15,11 @@ static const char BODYREQUEST[] = "gazebo_msgs/BodyRequest";
     public:
       const char* body_name;
 
+    BodyRequestRequest():
+      body_name("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -49,6 +54,10 @@ static const char BODYREQUEST[] = "gazebo_msgs/BodyRequest";
   class BodyRequestResponse : public ros::Msg
   {
     public:
+
+    BodyRequestResponse()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

@@ -16,6 +16,11 @@ namespace naoqi_msgs
       char* st_words;
       char* * words;
 
+    SetSpeechVocabularyGoal():
+      words_length(0), words(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

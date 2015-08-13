@@ -18,6 +18,12 @@ static const char COMPUTE_EFFECTOR_CAMERA_QUICK[] = "visp_hand2eye_calibration/c
       visp_hand2eye_calibration::TransformArray camera_object;
       visp_hand2eye_calibration::TransformArray world_effector;
 
+    compute_effector_camera_quickRequest():
+      camera_object(),
+      world_effector()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -43,6 +49,11 @@ static const char COMPUTE_EFFECTOR_CAMERA_QUICK[] = "visp_hand2eye_calibration/c
   {
     public:
       geometry_msgs::Transform effector_camera;
+
+    compute_effector_camera_quickResponse():
+      effector_camera()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

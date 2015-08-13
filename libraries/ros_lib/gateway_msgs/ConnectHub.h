@@ -15,6 +15,11 @@ static const char CONNECTHUB[] = "gateway_msgs/ConnectHub";
     public:
       const char* uri;
 
+    ConnectHubRequest():
+      uri("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -51,6 +56,12 @@ static const char CONNECTHUB[] = "gateway_msgs/ConnectHub";
     public:
       int8_t result;
       const char* error_message;
+
+    ConnectHubResponse():
+      result(0),
+      error_message("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

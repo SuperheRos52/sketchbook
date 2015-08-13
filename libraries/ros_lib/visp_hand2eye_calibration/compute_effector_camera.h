@@ -15,6 +15,10 @@ static const char COMPUTE_EFFECTOR_CAMERA[] = "visp_hand2eye_calibration/compute
   {
     public:
 
+    compute_effector_cameraRequest()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -36,6 +40,11 @@ static const char COMPUTE_EFFECTOR_CAMERA[] = "visp_hand2eye_calibration/compute
   {
     public:
       geometry_msgs::Transform effector_camera;
+
+    compute_effector_cameraResponse():
+      effector_camera()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

@@ -19,6 +19,13 @@ namespace naoqi_msgs
       naoqi_msgs::FollowPathActionResult action_result;
       naoqi_msgs::FollowPathActionFeedback action_feedback;
 
+    FollowPathAction():
+      action_goal(),
+      action_result(),
+      action_feedback()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

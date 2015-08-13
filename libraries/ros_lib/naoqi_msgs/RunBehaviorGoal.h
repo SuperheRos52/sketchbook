@@ -14,6 +14,11 @@ namespace naoqi_msgs
     public:
       const char* behavior;
 
+    RunBehaviorGoal():
+      behavior("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

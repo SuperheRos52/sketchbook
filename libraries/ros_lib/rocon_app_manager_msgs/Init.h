@@ -15,6 +15,11 @@ static const char INIT[] = "rocon_app_manager_msgs/Init";
     public:
       const char* name;
 
+    InitRequest():
+      name("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -50,6 +55,11 @@ static const char INIT[] = "rocon_app_manager_msgs/Init";
   {
     public:
       bool result;
+
+    InitResponse():
+      result(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

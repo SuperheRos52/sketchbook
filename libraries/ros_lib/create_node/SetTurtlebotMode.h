@@ -15,6 +15,11 @@ static const char SETTURTLEBOTMODE[] = "create_node/SetTurtlebotMode";
     public:
       uint8_t mode;
 
+    SetTurtlebotModeRequest():
+      mode(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -40,6 +45,11 @@ static const char SETTURTLEBOTMODE[] = "create_node/SetTurtlebotMode";
   {
     public:
       bool valid_mode;
+
+    SetTurtlebotModeResponse():
+      valid_mode(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

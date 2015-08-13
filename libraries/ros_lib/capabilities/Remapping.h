@@ -15,6 +15,12 @@ namespace capabilities
       const char* key;
       const char* value;
 
+    Remapping():
+      key(""),
+      value("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

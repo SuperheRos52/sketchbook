@@ -15,6 +15,11 @@ static const char SETSPEED[] = "dynamixel_controllers/SetSpeed";
     public:
       float speed;
 
+    SetSpeedRequest():
+      speed(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -37,6 +42,10 @@ static const char SETSPEED[] = "dynamixel_controllers/SetSpeed";
   class SetSpeedResponse : public ros::Msg
   {
     public:
+
+    SetSpeedResponse()
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

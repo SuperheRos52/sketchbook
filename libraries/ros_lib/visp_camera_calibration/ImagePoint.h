@@ -15,6 +15,12 @@ namespace visp_camera_calibration
       int32_t x;
       int32_t y;
 
+    ImagePoint():
+      x(0),
+      y(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

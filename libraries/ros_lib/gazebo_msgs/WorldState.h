@@ -30,6 +30,15 @@ namespace gazebo_msgs
       geometry_msgs::Wrench st_wrench;
       geometry_msgs::Wrench * wrench;
 
+    WorldState():
+      header(),
+      name_length(0), name(NULL),
+      pose_length(0), pose(NULL),
+      twist_length(0), twist(NULL),
+      wrench_length(0), wrench(NULL)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

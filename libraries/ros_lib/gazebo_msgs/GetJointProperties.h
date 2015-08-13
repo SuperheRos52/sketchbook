@@ -15,6 +15,11 @@ static const char GETJOINTPROPERTIES[] = "gazebo_msgs/GetJointProperties";
     public:
       const char* joint_name;
 
+    GetJointPropertiesRequest():
+      joint_name("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -67,6 +72,16 @@ static const char GETJOINTPROPERTIES[] = "gazebo_msgs/GetJointProperties";
       enum { FIXED =  3                 };
       enum { BALL =  4                 };
       enum { UNIVERSAL =  5                 };
+
+    GetJointPropertiesResponse():
+      type(0),
+      damping_length(0), damping(NULL),
+      position_length(0), position(NULL),
+      rate_length(0), rate(NULL),
+      success(0),
+      status_message("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

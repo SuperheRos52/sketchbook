@@ -15,6 +15,12 @@ namespace capabilities
       const char* capability;
       const char* provider;
 
+    Capability():
+      capability(""),
+      provider("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

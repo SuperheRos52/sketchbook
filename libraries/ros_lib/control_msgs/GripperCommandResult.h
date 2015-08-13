@@ -17,6 +17,14 @@ namespace control_msgs
       bool stalled;
       bool reached_goal;
 
+    GripperCommandResult():
+      position(0),
+      effort(0),
+      stalled(0),
+      reached_goal(0)
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;

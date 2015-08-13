@@ -14,6 +14,10 @@ static const char LISTCONTROLLERTYPES[] = "controller_manager_msgs/ListControlle
   {
     public:
 
+    ListControllerTypesRequest()
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -40,6 +44,12 @@ static const char LISTCONTROLLERTYPES[] = "controller_manager_msgs/ListControlle
       uint8_t base_classes_length;
       char* st_base_classes;
       char* * base_classes;
+
+    ListControllerTypesResponse():
+      types_length(0), types(NULL),
+      base_classes_length(0), base_classes(NULL)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

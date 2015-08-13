@@ -20,6 +20,15 @@ static const char SPAWNMODEL[] = "gazebo_msgs/SpawnModel";
       geometry_msgs::Pose initial_pose;
       const char* reference_frame;
 
+    SpawnModelRequest():
+      model_name(""),
+      model_xml(""),
+      robot_namespace(""),
+      initial_pose(),
+      reference_frame("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -100,6 +109,12 @@ static const char SPAWNMODEL[] = "gazebo_msgs/SpawnModel";
     public:
       bool success;
       const char* status_message;
+
+    SpawnModelResponse():
+      success(0),
+      status_message("")
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {

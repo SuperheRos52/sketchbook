@@ -16,6 +16,12 @@ static const char STARTCAPABILITY[] = "capabilities/StartCapability";
       const char* capability;
       const char* preferred_provider;
 
+    StartCapabilityRequest():
+      capability(""),
+      preferred_provider("")
+    {
+    }
+
     virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
@@ -65,6 +71,11 @@ static const char STARTCAPABILITY[] = "capabilities/StartCapability";
   {
     public:
       bool successful;
+
+    StartCapabilityResponse():
+      successful(0)
+    {
+    }
 
     virtual int serialize(unsigned char *outbuffer) const
     {
